@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="50.0" layoutY="225.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: skyblue;">
+         <children>
+            <Label layoutX="9.0" layoutY="98.0" text="시스템을 종료하시겠습니까?">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="42.0" layoutY="203.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="예">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="229.0" layoutY="203.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="아니오">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>
