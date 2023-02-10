@@ -12,6 +12,7 @@ private addOrderService as;
 private Parent paymethod;
 private payMethodService ps;
 
+
 public Controller() {
 	as = new addOrderServiceImpl();
 	ps = new payMethodServiceImpl();
@@ -38,4 +39,6 @@ public void card() {
 public void coupon() {
 	ps.coupon(paymethod);
 }
+
+//@FXML
 }
