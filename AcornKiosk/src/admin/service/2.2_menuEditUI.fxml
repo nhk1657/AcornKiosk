@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox layoutX="25.0" layoutY="125.0" prefHeight="50.0" prefWidth="350.0" spacing="10.0">
@@ -36,6 +35,6 @@
             </Label>
          </children>
       </HBox>
-      <Button layoutX="289.0" layoutY="192.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="86.0" text="변경하기" />
+      <Button layoutX="289.0" layoutY="192.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="86.0" text="변경하기" textAlignment="CENTER" />
    </children>
 </Pane>
