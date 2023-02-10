@@ -6,9 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
-prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: 000000;" 
-xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kang.menu789.Menu7">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kang.menu789.Menu7">
    <children>
       <ImageView fx:id="mtimageview" fitHeight="750.0" fitWidth="500.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -25,7 +23,7 @@ xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:contr
             <Font size="30.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="164.0" layoutY="87.0" prefHeight="40.0" prefWidth="173.0" text="영수증 번호 # 0000" textAlignment="CENTER" textFill="#1b0066">
+      <Label alignment="CENTER" layoutX="158.0" layoutY="87.0" prefHeight="40.0" prefWidth="184.0" text="영수증 번호 # 0000" textAlignment="CENTER" textFill="#1b0066">
          <font>
             <Font size="15.0" />
          </font>

@@ -64,9 +64,9 @@
 				<Font size="30.0" />
 			</font>
 		</Label>
-		<Label alignment="CENTER" contentDisplay="CENTER" layoutX="39.5" layoutY="424.0" prefHeight="173.0" prefWidth="421.0" text="쿠폰번호를 입력해주세요">
+		<Label alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="404.0" prefHeight="173.0" prefWidth="421.0" text="쿠폰번호를 입력해주세요">
 			<font>
-				<Font size="20.0" />
+				<Font name="System Bold" size="30.0" />
 			</font>
 		</Label>
       <Label alignment="CENTER_RIGHT" layoutX="150.0" layoutY="577.0" prefHeight="40.0" prefWidth="290.0" textFill="#01aaff">

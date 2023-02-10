@@ -29,7 +29,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="138.0" layoutY="255.0" prefHeight="40.0" prefWidth="234.0" text="#ordernum" textFill="#1b0066">
+      <Label alignment="CENTER" layoutX="96.0" layoutY="255.0" prefHeight="40.0" prefWidth="306.0" text="#주문번호 입력란" textFill="#1b0066">
          <font>
             <Font size="30.0" />
          </font>
