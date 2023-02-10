@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="199.0" layoutY="83.0" text="메뉴 관리" textAlignment="CENTER">
@@ -23,6 +22,6 @@
         </columns>
       </TableView>
       <Button layoutX="402.0" layoutY="670.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="48.0" text="&lt;" />
-      <Button layoutX="347.0" layoutY="601.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="103.0" text="메뉴 변경" />
+      <Button layoutX="347.0" layoutY="601.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="103.0" text="메뉴 변경" textAlignment="CENTER" />
    </children>
 </Pane>

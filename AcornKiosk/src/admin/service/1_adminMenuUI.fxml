@@ -6,32 +6,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.Controller">
    <children>
       <VBox alignment="CENTER" layoutX="65.0" layoutY="175.0" prefHeight="400.0" prefWidth="400.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="메뉴 설정">
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="메뉴 설정" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="매출 확인">
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="매출 확인" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="회원 관리">
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="회원 관리" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="쿠폰 관리">
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="쿠폰 관리" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="시스템 종료">
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="시스템 종료" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
