@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" 
+maxWidth="-Infinity" 
+minHeight="-Infinity" 
+minWidth="-Infinity" 
+prefHeight="470.0" 
+prefWidth="369.0" 
+style="-fx-background-color: 000000;" 
+xmlns="http://javafx.com/javafx/8" 
+xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="kang.menu789.Menu7">
+   <children>
+      <ImageView fx:id="mtimageview" fitHeight="470.0" fitWidth="282.0" layoutX="43.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/kang/image/receipt.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="292.0" layoutY="350.0" prefHeight="24.0" prefWidth="68.0" textFill="#01aaff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="376.0" prefHeight="24.0" prefWidth="68.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="14.0" prefHeight="40.0" prefWidth="163.0" text="컴포즈커피 에이콘점" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="130.0" layoutY="51.0" prefHeight="12.0" prefWidth="107.0" text="영수증 번호 # 0000" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="95.0" prefHeight="12.0" prefWidth="163.0" text="년/월/일/시/분/초" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="116.5" prefHeight="12.0" prefWidth="163.0" text="승인번호" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="138.0" prefHeight="12.0" prefWidth="163.0" text="카드/현금/등" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="160.0" prefHeight="12.0" prefWidth="163.0" text="일시불/등" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="203.0" prefHeight="12.0" prefWidth="163.0" text="년/월/일/시/분/초" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="245.0" prefHeight="12.0" prefWidth="163.0" text="00000원" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="331.0" prefHeight="12.0" prefWidth="163.0" text="+n포인트" textAlignment="CENTER" textFill="#1b0066">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="356.0" prefHeight="12.0" prefWidth="163.0" text="00000원" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
