@@ -7,20 +7,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" 
-maxWidth="-Infinity" 
-minHeight="-Infinity" 
-minWidth="-Infinity" 
-prefHeight="470.0" 
-prefWidth="369.0" 
-style="-fx-background-color: 000000;" 
-xmlns="http://javafx.com/javafx/8" 
-xmlns:fx="http://javafx.com/fxml/1" 
-fx:controller="kang.menu789.Menu7">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kang.menu789.Menu7">
    <children>
-      <ImageView fitHeight="470.0" fitWidth="307.0" layoutX="53.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="750.0" fitWidth="454.0" layoutX="45.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@/kang/image/payment.png" />
+            <Image url="@/kang/image/payment.png" />         
          </image>
       </ImageView>
       <Label layoutX="292.0" layoutY="350.0" prefHeight="24.0" prefWidth="68.0" textFill="#01aaff">
@@ -33,17 +24,17 @@ fx:controller="kang.menu789.Menu7">
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="84.5" layoutY="302.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="201.0" style="-fx-background-color: 000000; -fx-border-color: #1b0066;" text="영수증 인쇄" textFill="#1b0066">
+      <Button layoutX="105.0" layoutY="466.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: 000000; -fx-border-color: #1b0066;" text="영수증 인쇄" textFill="#1b0066">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Label layoutX="159.0" layoutY="156.0" text="#order" textFill="#1b0066">
+      <Label alignment="CENTER" layoutX="138.0" layoutY="255.0" prefHeight="40.0" prefWidth="234.0" text="#ordernum" textFill="#1b0066">
          <font>
-            <Font size="16.0" />
+            <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="84.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="201.0" style="-fx-background-color: #1b0066; -fx-border-color: #1b0066;" text="처음으로" textFill="WHITE">
+      <Button layoutX="105.0" layoutY="580.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #1b0066; -fx-border-color: #1b0066;" text="처음으로" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
