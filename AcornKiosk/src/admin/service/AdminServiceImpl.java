@@ -74,9 +74,24 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void memberEdit() {
+	public void memberEdit(Parent root) {
 		// TODO Auto-generated method stub
+		Stage memberEdit = new Stage();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("4.2_memberEditUI.fxml"));
 		
+		Parent membered = null;
+		try {
+			membered = loader.load();
+			
+			memberEdit.setScene(new Scene(membered));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		Controller ctrl = loader.getController();
+		ctrl.setMembered(membered);
+		memberEdit.setTitle("쿠폰 관리");
+		memberEdit.show();
 	}
 
 	@Override

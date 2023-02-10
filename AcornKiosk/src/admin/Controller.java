@@ -14,6 +14,7 @@ public class Controller {
 	private Parent coupon;
 	private Parent end;
 	private Parent menued;
+	private Parent membered;
 	AdminService as;
 public void setRoot(Parent root) {
 	this.root = root;
@@ -60,6 +61,13 @@ public void menuEdit() {
 public void setMenuded(Parent menued) {
 	// TODO Auto-generated method stub
 	this.menued=menued;
+}
+public void memberEdit() {
+	as.memberEdit(root);
+}
+public void setMembered(Parent membered) {
+	// TODO Auto-generated method stub
+	this.membered=membered;
 }
 }
 
