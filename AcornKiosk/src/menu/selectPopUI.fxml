@@ -63,7 +63,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="선택" textFill="#01aaff">
+                  <Button mnemonicParsing="false" onAction="#popOption" prefWidth="75.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="선택" textFill="#01aaff">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -72,12 +72,12 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="25.0" layoutY="515.0" prefHeight="100.0" prefWidth="400.0" spacing="150.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#popClose" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: #01AAFF;" text="선택" textFill="WHITE">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#popChoice" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: #01AAFF;" text="선택" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
