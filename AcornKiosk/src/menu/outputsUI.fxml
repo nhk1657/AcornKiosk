@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="menu.TestController">
+   <children>
+      <HBox prefHeight="150.0" prefWidth="500.0" spacing="5.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #01AAFF;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="음료명" />
+                  <Label text="개수" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #01AAFF;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="음료명" />
+                  <Label text="개수" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #01AAFF;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="음료명" />
+                  <Label text="개수" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="80.0" prefWidth="90.0" style="-fx-border-color: #01AAFF;" text="총 가격" />
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" prefHeight="190.0" prefWidth="80.0" style="-fx-background-color: #01AAFF;" text="Button" textFill="WHITE" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

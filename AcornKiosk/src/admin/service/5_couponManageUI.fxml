@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="admin.Controller">
+   <children>
+      <Label layoutX="199.0" layoutY="85.0" text="쿠폰 관리">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView layoutX="50.0" layoutY="175.0" prefHeight="400.0" prefWidth="400.0">
+        <columns>
+          <TableColumn prefWidth="115.20001983642578" text="ID" />
+          <TableColumn prefWidth="173.60003662109375" text="쿠폰 번호" />
+            <TableColumn prefWidth="112.7999267578125" text="사용 일자" />
+        </columns>
+      </TableView>
+      <Button layoutX="417.0" layoutY="654.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="33.0" text="&lt;" />
+   </children>
+</Pane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="menu.TestController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Button fx:id="selcof" mnemonicParsing="true" onAction="#selectSecBtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="커피" textFill="#01aaff" />
+            <Button fx:id="selsmoo" mnemonicParsing="false" onAction="#selectSecBtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="스무디" textFill="#01aaff" />
+            <Button fx:id="selade" mnemonicParsing="false" onAction="#selectSecBtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="에이드" textFill="#01aaff" />
+            <Button fx:id="seltea" mnemonicParsing="false" onAction="#selectSecBtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="차" textFill="#01aaff" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

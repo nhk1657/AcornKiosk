@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="menu.TestController">
    <children>
       <Pane prefHeight="650.0" prefWidth="450.0" style="-fx-background-color: #FFFFFF;">
          <children>
