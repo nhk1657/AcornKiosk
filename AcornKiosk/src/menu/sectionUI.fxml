@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
 
 <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.TestController">
    <children>
@@ -24,7 +25,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                <children>
-                  <Button fx:id="secbtn1" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF;" />
+                  <Button fx:id="secbtn1" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
                   <Label text="상품명" />
                   <Label text="가격" />
                </children>
@@ -38,21 +39,21 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="2">
                <children>
-                  <Button fx:id="secbtn3" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF;" />
+                  <Button fx:id="secbtn3" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: transparent; "/> 
                   <Label text="상품명" />
                   <Label text="가격" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="1">
                <children>
-                  <Button fx:id="secbtn4" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF;" />
+                  <Button fx:id="secbtn4" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: transparent; " />
                   <Label text="상품명" />
                   <Label text="가격" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Button fx:id="secbtn5" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF;" />
+                  <Button fx:id="secbtn5" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
                   <Label text="상품명" />
                   <Label text="가격" />
                </children>

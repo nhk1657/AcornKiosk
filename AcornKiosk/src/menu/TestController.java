@@ -12,6 +12,7 @@ public class TestController {
 	private Section se;
 	private SelectSection ss;
 	private SelectPop sp;
+	private SelectOption so;
 	
 	public TestController() {
 		ss=new SelectSectionImpl();
@@ -29,8 +30,12 @@ public class TestController {
 		this.selectpop= selectpop;
 	}
 	
+	
 	public void selectSecBtn() {
 		ss.selectSecBtn(root);
+	}
+	public void btnImg() {
+		ss.btnImg(root);
 	}
 	
 	public void selectMenuProc() {
@@ -47,5 +52,13 @@ public class TestController {
 	
 	public void popOption() {
 		sp.popOption(selectpop);
+	}
+	
+	public void optionChoice() {
+		so.optionChoice(selectpop);
+	}
+	
+	public void optionClose() {
+		so.optionClose(selectpop);
 	}
 }
