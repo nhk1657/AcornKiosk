@@ -1,5 +1,7 @@
 package admin.dataTest;
 
-public interface dataTest {
+import java.util.List;
 
+public interface dataTest {
+List<Menu> selectAll();
 }
