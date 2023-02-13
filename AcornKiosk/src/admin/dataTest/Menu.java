@@ -7,6 +7,13 @@ int menuprice;
 int menuremains;
 int menusell;
 int menusection;
+int menusale;
+public int getMenusale() {
+	return menusale;
+}
+public void setMenusale() {
+	this.menusale = menuprice*menusell;
+}
 public int getMenuid() {
 	return menuid;
 }

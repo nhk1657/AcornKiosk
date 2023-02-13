@@ -30,7 +30,7 @@ public class dataTestImpl implements dataTest{
 		}
 	}
 
-	public List<Menu> selectAll() {
+	public List<Menu> selectMenu() {
 		// TODO Auto-generated method stub
 		String sql = "select * from menu";
     	List<Menu> menuList = new ArrayList<>();
@@ -45,7 +45,6 @@ public class dataTestImpl implements dataTest{
 				m.setMenuname(rs.getString(2));
 				m.setMenuprice(rs.getInt(3));
 				m.setMenuremains(rs.getInt(4));
-				m.setMenusell(rs.getInt(5));
 				m.setMenusection(rs.getInt(6));
 				System.out.println(m.getMenuid()+" "+m.getMenuname()+" "+m.getMenuprice()+" "+m.getMenuremains()+" "+m.getMenusection()+" "+m.getMenusell());
 				menuList.add(m);
@@ -55,5 +54,59 @@ public class dataTestImpl implements dataTest{
 			e.printStackTrace();
 		}
 		return menuList;
+	}
+
+	@Override
+	public List<Menu> selectSale() {
+		// TODO Auto-generated method stub
+		String sql = "select * from menu";
+    	List<Menu> saleList = new ArrayList<>();
+    	try {
+			pstmt = con.prepareStatement(sql);
+			
+			rs= pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Menu m = new Menu();
+				m.setMenuname(rs.getString(2));
+				m.setMenuprice(rs.getInt(3));
+				m.setMenusell(rs.getInt(5));
+				m.setMenusale();
+				System.out.println(m.getMenuname()+" "+m.getMenuprice()+" "+m.getMenusell()+" "+m.getMenusale());
+				saleList.add(m);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return saleList;
+	}
+
+	@Override
+	public List<Member> selectMember() {
+		// TODO Auto-generated method stub
+		String sql = "select * from member";
+    	List<Member> memberList = new ArrayList<>();
+    	try {
+			pstmt = con.prepareStatement(sql);
+			
+			rs= pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Member m = new Member();
+				m.setId(rs.getString(1));
+				m.setPw(rs.getString(2));
+				m.setName(rs.getString(3));
+				m.setEmail(rs.getString(4));
+				m.setBirth(rs.getDate(5));
+				m.setStamp(rs.getInt(6));
+				System.out.println(m.getId()+" "+m.getPw()+" "+m.getName()+" "+m.getEmail()+" "+m.getBirth()+" "+m.getStamp());
+				memberList.add(m);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return memberList;
 	}
 }

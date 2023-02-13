@@ -3,6 +3,7 @@ package admin.service;
 import java.util.List;
 
 import admin.Controller;
+import admin.dataTest.Member;
 import admin.dataTest.Menu;
 import admin.dataTest.dataTest;
 import admin.dataTest.dataTestImpl;
@@ -11,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -46,6 +48,8 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public void sales(Parent root) {
 		// TODO Auto-generated method stub
+		dt=new dataTestImpl();
+		
 		Stage sales = (Stage) root.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("3_salesUI.fxml"));
 		
@@ -58,6 +62,39 @@ public class AdminServiceImpl implements AdminService{
 			e.printStackTrace();
 		}
 		
+		ScrollPane sp = (ScrollPane) sale.lookup("#saleList");
+		
+		TableView<Menu> saleTable = new TableView<>();
+		
+		TableColumn<Menu, String> menuname = new TableColumn<>("메뉴");
+		menuname.setCellValueFactory(new PropertyValueFactory<>("menuname"));
+		menuname.setPrefWidth(100);
+		TableColumn<Menu, String> menuprice = new TableColumn<>("가격");
+		menuprice.setCellValueFactory(new PropertyValueFactory<>("menuprice"));
+		menuprice.setPrefWidth(100);
+		TableColumn<Menu, String> menusell = new TableColumn<>("판매량");
+		menusell.setCellValueFactory(new PropertyValueFactory<>("menusell"));
+		menusell.setPrefWidth(100);
+		TableColumn<Menu, String> menusale = new TableColumn<>("판매 금액");
+		menusale.setCellValueFactory(new PropertyValueFactory<>("menusale"));
+		menusale.setPrefWidth(100);
+		
+		saleTable.getColumns().addAll(menuname,menuprice,menusell,menusale);
+		
+		List<Menu> saleList = dt.selectSale(); 
+
+		
+		ObservableList<Menu> data = FXCollections.observableArrayList(saleList);
+		saleTable.setItems(data);
+		saleTable.setPrefSize(400, 1000);
+		
+		sp.setContent(saleTable);
+		//sp.getChildrenUnmodifiable().add(menuTable);
+		sp.setPrefSize(400, 400);
+		sp.relocate(50, 175);
+		
+		
+		
 		Controller ctrl = loader.getController();
 		ctrl.setSale(sale);
 		sales.setTitle("매출 확인");
@@ -67,6 +104,7 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public void membermManage(Parent root) {
 		// TODO Auto-generated method stub
+		dt=new dataTestImpl();
 		Stage memberManage = (Stage) root.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("4_memberManageUI.fxml"));
 		
@@ -78,6 +116,42 @@ public class AdminServiceImpl implements AdminService{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		ScrollPane sp = (ScrollPane) member.lookup("#memberList");
+		
+		TableView<Member> memberTable = new TableView<>();
+		
+		TableColumn<Member, String> id = new TableColumn<>("아이디");
+		id.setCellValueFactory(new PropertyValueFactory<>("id"));
+		id.setPrefWidth(100);
+		TableColumn<Member, String> pw = new TableColumn<>("비밀번호");
+		pw.setCellValueFactory(new PropertyValueFactory<>("pw"));
+		pw.setPrefWidth(100);
+		TableColumn<Member, String> name = new TableColumn<>("이름");
+		name.setCellValueFactory(new PropertyValueFactory<>("name"));
+		name.setPrefWidth(100);
+		TableColumn<Member, String> email = new TableColumn<>("이메일");
+		email.setCellValueFactory(new PropertyValueFactory<>("email"));
+		email.setPrefWidth(200);
+		TableColumn<Member, String> birth = new TableColumn<>("생년월일");
+		birth.setCellValueFactory(new PropertyValueFactory<>("birth"));
+		birth.setPrefWidth(150);
+		TableColumn<Member, String> stamp = new TableColumn<>("스탬프");
+		stamp.setCellValueFactory(new PropertyValueFactory<>("stamps"));
+		stamp.setPrefWidth(100);
+		
+		memberTable.getColumns().addAll(id,pw,name,email,birth,stamp);
+		
+		List<Member> memberList = dt.selectMember(); 
+		
+		ObservableList<Member> data = FXCollections.observableArrayList(memberList);
+		memberTable.setItems(data);
+		memberTable.setPrefSize(750, 1000);
+		
+		sp.setContent(memberTable);
+		//sp.getChildrenUnmodifiable().add(menuTable);
+		sp.setPrefSize(400, 400);
+		sp.relocate(50, 175);
 		
 		Controller ctrl = loader.getController();
 		ctrl.setMember(member);
@@ -180,20 +254,18 @@ public class AdminServiceImpl implements AdminService{
 		TableColumn<Menu, String> menuremains = new TableColumn<>("재고");
 		menuremains.setCellValueFactory(new PropertyValueFactory<>("menuremains"));
 		menuremains.setPrefWidth(100);
-		TableColumn<Menu, String> menusell = new TableColumn<>("판매량");
-		menusell.setCellValueFactory(new PropertyValueFactory<>("menusell"));
-		menusell.setPrefWidth(100);
+		
 		TableColumn<Menu, String> menusection = new TableColumn<>("메뉴 섹션");
 		menusection.setCellValueFactory(new PropertyValueFactory<>("menusection"));
 		menusection.setPrefWidth(100);
 		
-		menuTable.getColumns().addAll(menuid,menuname,menuprice,menuremains,menusell,menusection);
+		menuTable.getColumns().addAll(menuid,menuname,menuprice,menuremains,menusection);
 		
-		List<Menu> menuList = dt.selectAll(); 
+		List<Menu> menuList = dt.selectMenu(); 
 		
 		ObservableList<Menu> data = FXCollections.observableArrayList(menuList);
 		menuTable.setItems(data);
-		menuTable.setPrefSize(550, 1000);
+		menuTable.setPrefSize(450, 1000);
 		
 		sp.setContent(menuTable);
 		//sp.getChildrenUnmodifiable().add(menuTable);

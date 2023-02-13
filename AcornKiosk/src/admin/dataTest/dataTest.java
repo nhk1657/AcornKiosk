@@ -3,5 +3,9 @@ package admin.dataTest;
 import java.util.List;
 
 public interface dataTest {
-List<Menu> selectAll();
+List<Menu> selectMenu();
+
+List<Menu> selectSale();
+
+List<Member> selectMember();
 }
