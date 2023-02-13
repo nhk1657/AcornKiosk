@@ -46,7 +46,7 @@ public class dataTestImpl implements dataTest{
 				m.setMenuprice(rs.getInt(3));
 				m.setMenuremains(rs.getInt(4));
 				m.setMenusection(rs.getInt(6));
-				System.out.println(m.getMenuid()+" "+m.getMenuname()+" "+m.getMenuprice()+" "+m.getMenuremains()+" "+m.getMenusection()+" "+m.getMenusell());
+				System.out.println(m.getMenuid()+" "+m.getMenuname()+" "+m.getMenuprice()+" "+m.getMenuremains()+" "+m.getMenusection());
 				menuList.add(m);
 			}
 		} catch (Exception e) {

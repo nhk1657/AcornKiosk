@@ -8,7 +8,7 @@ String pw;
 String name;
 String email;
 Date birth;
-int stamp;
+int stamps;
 public Date getBirth() {
 	return birth;
 }
@@ -40,10 +40,10 @@ public void setEmail(String email) {
 	this.email = email;
 }
 public int getStamp() {
-	return stamp;
+	return stamps;
 }
-public void setStamp(int stamp) {
-	this.stamp = stamp;
+public void setStamp(int stamps) {
+	this.stamps = stamps;
 }
 
 }

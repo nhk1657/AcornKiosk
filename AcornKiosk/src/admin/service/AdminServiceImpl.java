@@ -137,11 +137,11 @@ public class AdminServiceImpl implements AdminService{
 		TableColumn<Member, String> birth = new TableColumn<>("생년월일");
 		birth.setCellValueFactory(new PropertyValueFactory<>("birth"));
 		birth.setPrefWidth(150);
-		TableColumn<Member, String> stamp = new TableColumn<>("스탬프");
-		stamp.setCellValueFactory(new PropertyValueFactory<>("stamps"));
-		stamp.setPrefWidth(100);
+		TableColumn<Member, String> stamps = new TableColumn<>("스탬프");
+		stamps.setCellValueFactory(new PropertyValueFactory<>("stamps"));
+		stamps.setPrefWidth(100);
 		
-		memberTable.getColumns().addAll(id,pw,name,email,birth,stamp);
+		memberTable.getColumns().addAll(id,pw,name,email,birth,stamps);
 		
 		List<Member> memberList = dt.selectMember(); 
 		
