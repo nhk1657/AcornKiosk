@@ -1,5 +1,5 @@
 package admin.service;
 
-public class MenuManage {
+public interface MenuManage {
 
 }
