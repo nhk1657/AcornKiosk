@@ -26,7 +26,7 @@
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                <children>
                   <Button fx:id="secbtn1" alignment="CENTER" mnemonicParsing="false" onAction="#selectMenuProc" prefHeight="110.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
-                  <Label text="상품명" />
+                  <Label fx:id="secname1" text="상품명" />
                   <Label text="가격" />
                </children>
             </VBox>
