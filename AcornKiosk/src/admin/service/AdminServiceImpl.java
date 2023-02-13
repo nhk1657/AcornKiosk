@@ -261,6 +261,7 @@ public class AdminServiceImpl implements AdminService{
 		
 		menuTable.getColumns().addAll(menuid,menuname,menuprice,menuremains,menusection);
 		
+		
 		List<Menu> menuList = dt.selectMenu(); 
 		
 		ObservableList<Menu> data = FXCollections.observableArrayList(menuList);
