@@ -1,11 +1,12 @@
 package menu;
 
 
+import javafx.event.ActionEvent;
 import javafx.scene.Parent;
 
 
 public interface SelectSection {
-	public void selectSecBtn(Parent root);
-	public void btnImg(Parent root);
+	public void selectSecBtn(ActionEvent event, Parent root);
+
 	
 }
