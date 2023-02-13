@@ -8,4 +8,6 @@ List<Menu> selectMenu();
 List<Menu> selectSale();
 
 List<Member> selectMember();
+
+List<Coupon> selectCoupon();
 }

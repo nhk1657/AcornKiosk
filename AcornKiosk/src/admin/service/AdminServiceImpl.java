@@ -3,6 +3,7 @@ package admin.service;
 import java.util.List;
 
 import admin.Controller;
+import admin.dataTest.Coupon;
 import admin.dataTest.Member;
 import admin.dataTest.Menu;
 import admin.dataTest.dataTest;
@@ -183,6 +184,7 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public void couponManage(Parent root) {
 		// TODO Auto-generated method stub
+		dt=new dataTestImpl();
 		Stage couponManage = (Stage) root.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("5_couponManageUI.fxml"));
 		
@@ -194,6 +196,32 @@ public class AdminServiceImpl implements AdminService{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		ScrollPane sp = (ScrollPane) coupon.lookup("#couponList");
+		
+		TableView<Coupon> couponTable = new TableView<>();
+		
+		TableColumn<Coupon, String> couponNum = new TableColumn<>("쿠폰번호");
+		couponNum.setCellValueFactory(new PropertyValueFactory<>("couponNum"));
+		couponNum.setPrefWidth(200);
+		TableColumn<Coupon, String> usedDate = new TableColumn<>("사용일");
+		usedDate.setCellValueFactory(new PropertyValueFactory<>("usedDate"));
+		usedDate.setPrefWidth(150);
+		TableColumn<Coupon, String> memId = new TableColumn<>("소유자ID");
+		memId.setCellValueFactory(new PropertyValueFactory<>("memId"));
+		memId.setPrefWidth(100);
+		
+		couponTable.getColumns().addAll(couponNum,usedDate,memId);
+		
+		List<Coupon> couponList = dt.selectCoupon(); 
+		
+		ObservableList<Coupon> data = FXCollections.observableArrayList(couponList);
+		couponTable.setItems(data);
+		couponTable.setPrefSize(450, 1000);
+		
+		sp.setContent(couponTable);
+		sp.setPrefSize(400, 400);
+		sp.relocate(50, 175);
 		
 		Controller ctrl = loader.getController();
 		ctrl.setCoupon(coupon);

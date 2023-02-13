@@ -109,4 +109,30 @@ public class dataTestImpl implements dataTest{
 		}
 		return memberList;
 	}
+
+	@Override
+	public List<Coupon> selectCoupon() {
+		// TODO Auto-generated method stub
+		String sql = "select * from coupon";
+    	List<Coupon> couponList = new ArrayList<>();
+    	try {
+			pstmt = con.prepareStatement(sql);
+			
+			rs= pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Coupon c = new Coupon();
+				c.setCouponNum(rs.getInt(1));
+				c.setUsedDate(rs.getDate(2));
+				c.setMemId(rs.getString(3));
+				
+				System.out.println(c.getCouponNum()+" "+c.getUsedDate()+" "+c.getMemId());
+				couponList.add(c);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return couponList;
+	}
 }
