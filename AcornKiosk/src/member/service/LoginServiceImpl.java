@@ -7,12 +7,16 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import member.dao.DatabaseServiceImpl;
+import admin.AdminMain;
 
 public class LoginServiceImpl implements LoginService {
 	DatabaseServiceImpl ds = new DatabaseServiceImpl();
+	AdminMain admin = new AdminMain();
 		
 		// 로그인
 		public void loginProc(Parent loginRoot) throws Exception {
+			
+			Stage primaryStage = (Stage) loginRoot.getScene().getWindow();
 			
 			// 아이디 / 패스워드 값 가져오기
 			 TextField id = (TextField) loginRoot.lookup("#txtId");
@@ -38,11 +42,12 @@ public class LoginServiceImpl implements LoginService {
 				break;
 				
 			// 로그인 성공한 경우 창 닫기
-//			case 2:
+			case 2:
+				admin.start(primaryStage);
 //				Stage s = (Stage)loginRoot.getScene().getWindow();
 //				Stage s = (Stage)loginRoot.getScene().getWindow();
 //				s.close();
-//				break;
+				break;
 			}
 		}
 	

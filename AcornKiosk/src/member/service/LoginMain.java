@@ -21,7 +21,6 @@ public class LoginMain extends Application {
 		primaryStage.setScene(new Scene(loginRoot));
 		primaryStage.setTitle("로그인");
 		primaryStage.show();	
-		
 	}
 	
 	public static void main(String[] args) {
