@@ -28,6 +28,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class AdminServiceImpl implements AdminService{
+	private static final Parent adminMenuManage = null;
 	dataTest dt;
 	Stage stage;
 
@@ -285,7 +286,7 @@ public class AdminServiceImpl implements AdminService{
 		
 		ctrl.setRoot(adminMenuManage);
 		
-		back.setScene(new Scene(menuBack));
+		back.setScene(new Scene(adminMenuManage));
 		back.setTitle("관리자모드");
 		back.show();
 	}
