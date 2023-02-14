@@ -54,11 +54,10 @@ public class orderdataImpl implements orderdata{
 			om.setMenuname(rs.getString(2));
 			om.setMenuprice(rs.getInt(3));
 			om.setMenusell(rs.getInt(4));
-			System.out.println(2222);
 			System.out.println(om.getMenuid() + " " + om.getMenuname() +" "+ om.getMenuprice() +" " +om.getMenusell());
 
 			orderList.add(om);
-			System.out.println(1113);
+			
 		}
 
 	}catch (Exception e) {

@@ -33,21 +33,21 @@ public class addOrderMain extends Application{
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("addOrderUI.fxml"));
 		
-		Parent root = loader.load();
+		Parent orderRoot = loader.load();
 		
 		//장바구니 db 가져오기
 		
-		ScrollPane sp = (ScrollPane)root.lookup("#orderList");
-		System.out.println(1101);
+		ScrollPane sp = (ScrollPane)orderRoot.lookup("#orderList");
+		
 		TableView<orderMenu> orderTable = new TableView<>();
 		
 		TableColumn<orderMenu, String> menuid = new TableColumn<>("메뉴id");
 		menuid.setCellValueFactory(new PropertyValueFactory<>("menuid"));
-		menuid.setPrefWidth(100);
+		menuid.setPrefWidth(50);
 		
 		TableColumn<orderMenu, String> menuname = new TableColumn<>("메뉴");
 		menuname.setCellValueFactory(new PropertyValueFactory<>("menuname"));
-		menuname.setPrefWidth(100);
+		menuname.setPrefWidth(150);
 		
 		TableColumn<orderMenu, String> menuprice = new TableColumn<>("가격");
 		menuprice.setCellValueFactory(new PropertyValueFactory<>("menuprice"));
@@ -73,9 +73,9 @@ public class addOrderMain extends Application{
 		
 		
 		Controller ctrl = loader.getController();
-		ctrl.setRoot(root);
+		ctrl.setRoot(orderRoot);
 		
-		primaryStage.setScene(new Scene(root));
+		primaryStage.setScene(new Scene(orderRoot));
 		primaryStage.setTitle("주문목록");
 		primaryStage.show();
 	}

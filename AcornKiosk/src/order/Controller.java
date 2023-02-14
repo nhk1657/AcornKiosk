@@ -7,9 +7,11 @@ import order.service.payMethodService;
 import order.service.payMethodServiceImpl;
 
 public class Controller {
-private Parent root;
+//order main Parent
+private Parent orderRoot;
 private addOrderService as;
-private Parent paymethod;
+//order 결제 선택 Parent
+private Parent orderPay;
 private payMethodService ps;
 
 
@@ -18,26 +20,26 @@ public Controller() {
 	ps = new payMethodServiceImpl();
 }
 
-public void setRoot(Parent root) {
+public void setRoot(Parent orderRoot) {
 	// TODO Auto-generated method stub
-	this.root = root;
+	this.orderRoot = orderRoot;
 }
-public void setPayMehtod(Parent paymethod ) {
+public void setPayMehtod(Parent orderPay ) {
 	// TODO Auto-generated method stub
-	this.paymethod = paymethod;
+	this.orderPay = orderPay;
 }
 public void payProc() {
-	as.payProc(root);
+	as.payProc(orderRoot);
 }
 public void cancelProc() {
-	as.cancelProc(root);
+	as.cancelProc(orderRoot);
 }
 
 public void card() {
-	ps.card(paymethod);
+	ps.card(orderPay);
 }
 public void coupon() {
-	ps.coupon(paymethod);
+	ps.coupon(orderPay);
 }
 
 //@FXML
