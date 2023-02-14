@@ -13,10 +13,12 @@ import member.dao.DatabaseServiceImpl;
 public class MemberServiceImpl implements MemberService {
 	CommonServiceImpl cs;
 	DatabaseServiceImpl ds;
+	LoginMain lm;
 	
 	public MemberServiceImpl() {
 		cs = new CommonServiceImpl();
 		ds = new DatabaseServiceImpl();
+		lm = new LoginMain();
 	}
 	
 	public void joinProc(Parent registerRoot) throws Exception {
@@ -86,7 +88,13 @@ public class MemberServiceImpl implements MemberService {
 		} else {
 			ds.insert(m);
 			Stage primaryStage = (Stage) registerRoot.getScene().getWindow();
-			primaryStage.close();
+			lm.start(primaryStage);
 		}
+	}
+	
+	// 취소 버튼 클릭 시 로그인 화면으로 재전환
+	public void cancelProc(Parent loginRoot) throws Exception {
+		Stage primaryStage = (Stage) loginRoot.getScene().getWindow();
+		lm.start(primaryStage);
 	}
 }

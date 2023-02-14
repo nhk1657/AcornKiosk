@@ -137,7 +137,7 @@ prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns=
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="460.0" style="-fx-background-color: white; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#cancelProc" prefHeight="41.0" prefWidth="460.0" style="-fx-background-color: white; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                <font>
                   <Font size="24.0" />
                </font>

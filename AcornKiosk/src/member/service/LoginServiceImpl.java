@@ -8,10 +8,12 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import member.dao.DatabaseServiceImpl;
 import admin.AdminMain;
+import menu.TestMain;
 
 public class LoginServiceImpl implements LoginService {
 	DatabaseServiceImpl ds = new DatabaseServiceImpl();
-	AdminMain admin = new AdminMain();
+	AdminMain am = new AdminMain();
+	TestMain tm = new TestMain();
 		
 		// 로그인
 		public void loginProc(Parent loginRoot) throws Exception {
@@ -41,32 +43,53 @@ public class LoginServiceImpl implements LoginService {
 				System.out.println("로그인 실패");
 				break;
 				
-			// 로그인 성공한 경우 창 닫기
+			// 로그인 성공한 경우
 			case 2:
-				admin.start(primaryStage);
-//				Stage s = (Stage)loginRoot.getScene().getWindow();
-//				Stage s = (Stage)loginRoot.getScene().getWindow();
-//				s.close();
+				tm.start(primaryStage);
+				break;
+				
+			// 관리자 모드 진입하는 경우 (admin, 1234)
+			case 3:
+				am.start(primaryStage);
 				break;
 			}
 		}
 	
 	public void registerProc(Parent loginRoot) {
-		Stage registerForm = new Stage();
+//		Stage registerForm = new Stage();	
+//		
+//		FXMLLoader loader = new FXMLLoader(
+//				getClass().getResource("../registerUI.fxml"));
+//		
+//		Parent registerRoot = null;
+//		try {
+//			registerRoot = loader.load();
+//			registerForm.setScene(new Scene(registerRoot));
+//		} catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		Controller ctrl = loader.getController();
+//		ctrl.setMember(registerRoot);
 		
+		Stage registerForm = (Stage) loginRoot.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("../registerUI.fxml"));
 		
-		Parent registerRoot = null;
+//		try {
+//			registerForm.setScene(new Scene(loader.load()));
+//		} catch(Exception e) {
+//			e.printStackTrace();
+//		}
 		try {
-			registerRoot = loader.load();
-			registerForm.setScene(new Scene(registerRoot));
+			loginRoot = loader.load();
+			registerForm.setScene(new Scene(loginRoot));
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		Controller ctrl = loader.getController();
-		ctrl.setMember(registerRoot);
+		ctrl.setRoot(loginRoot);
 		
 		registerForm.setTitle("회원 가입");
 		registerForm.show();

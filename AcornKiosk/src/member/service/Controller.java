@@ -7,12 +7,12 @@ public class Controller {
 	private Parent registerRoot;
 	private LoginServiceImpl ls;
 	private MemberServiceImpl ms;
-	
+
 	public Controller() {
 		ls = new LoginServiceImpl();
 		ms = new MemberServiceImpl();
 	}
-	
+
 	public void setRoot(Parent loginRoot) {
 		this.loginRoot = loginRoot;
 	}
@@ -24,12 +24,16 @@ public class Controller {
 	public void loginProc() throws Exception {
 		ls.loginProc(loginRoot);
 	}
-	
+
 	public void registerProc() {
-		ls.registerProc(registerRoot);
+		ls.registerProc(loginRoot);
 	}
 
 	public void joinProc() throws Exception {
-		ms.joinProc(registerRoot);
+		ms.joinProc(loginRoot);
+	}
+
+	public void cancelProc() throws Exception {
+		ms.cancelProc(loginRoot);
 	}
 }

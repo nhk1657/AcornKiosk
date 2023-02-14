@@ -38,6 +38,11 @@ public class DatabaseServiceImpl implements DatabaseService {
 	
 	// 로그인
 	public int login(String id, String pw) throws Exception {
+		// 관리자 모드 진입
+		if(id.equals("admin") && pw.equals("1234")) {
+			return 3;
+		}
+		
 		String sql = "SELECT * FROM member WHERE ID = ?";
 		pstmt = con.prepareStatement(sql);
 		pstmt.setString(1, id);
