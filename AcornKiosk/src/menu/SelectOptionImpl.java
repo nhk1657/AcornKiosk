@@ -1,10 +1,14 @@
 package menu;
 
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.fxml.Initializable;
 
 public class SelectOptionImpl implements SelectOption{
 
@@ -41,19 +45,19 @@ public class SelectOptionImpl implements SelectOption{
 		
 		Parent selectpop = null;
 		try {
-			selectpop = loader.load();
-			
+			selectpop = loader.load();	
 			selectPopUI.setScene(new Scene(selectpop));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		TestController ctrl = loader.getController();
-		ctrl.setSectionUI(selectpop);
+		ctrl.returnOptUI(selectpop);
 		
 		
 		selectPopUI.setTitle("옵션 선택");
 		selectPopUI.show();
 	}
+
 
 }

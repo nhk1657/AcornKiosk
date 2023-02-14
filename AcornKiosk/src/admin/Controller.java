@@ -1,8 +1,17 @@
 package admin;
 
+import java.awt.Button;
+import java.io.IOException;
+import java.util.ResourceBundle;
+
 import admin.service.AdminService;
 import admin.service.AdminServiceImpl;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Controller {
@@ -68,6 +77,12 @@ public void memberEdit() {
 public void setMembered(Parent membered) {
 	// TODO Auto-generated method stub
 	this.membered=membered;
+}
+public void yes() {
+	
+}
+public void no() {
+	
 }
 }
 

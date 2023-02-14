@@ -1,5 +1,8 @@
 package admin.service;
 
+
+
+
 import javafx.scene.Parent;
 
 public interface AdminService {
@@ -10,4 +13,5 @@ void membermManage(Parent root);
 void memberEdit(Parent root);
 void couponManage(Parent root);
 void endSystem(Parent root);
+
 }
