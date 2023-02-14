@@ -1,5 +1,6 @@
 package admin.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import admin.Controller;
@@ -10,9 +11,11 @@ import admin.dataTest.dataTest;
 import admin.dataTest.dataTestImpl;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
@@ -23,7 +26,7 @@ import javafx.stage.Stage;
 
 public class AdminServiceImpl implements AdminService{
 	dataTest dt;
-
+	Stage stage;
 
 	@Override
 	public void menuEdit(Parent root) {
@@ -51,7 +54,7 @@ public class AdminServiceImpl implements AdminService{
 		// TODO Auto-generated method stub
 		dt=new dataTestImpl();
 		
-		Stage sales = (Stage) root.getScene().getWindow();
+		Stage sales = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("3_salesUI.fxml"));
 		
 		Parent sale = null;
@@ -106,7 +109,7 @@ public class AdminServiceImpl implements AdminService{
 	public void membermManage(Parent root) {
 		// TODO Auto-generated method stub
 		dt=new dataTestImpl();
-		Stage memberManage = (Stage) root.getScene().getWindow();
+		Stage memberManage = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("4_memberManageUI.fxml"));
 		
 		Parent member = null;
@@ -185,7 +188,7 @@ public class AdminServiceImpl implements AdminService{
 	public void couponManage(Parent root) {
 		// TODO Auto-generated method stub
 		dt=new dataTestImpl();
-		Stage couponManage = (Stage) root.getScene().getWindow();
+		Stage couponManage = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("5_couponManageUI.fxml"));
 		
 		Parent coupon = null;
@@ -232,7 +235,7 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public void endSystem(Parent root) {
 		// TODO Auto-generated method stub
-		Stage endSystem = (Stage) root.getScene().getWindow();
+		Stage endSystem = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("6_endSystemUI.fxml"));
 		
 		Parent end = null;
@@ -254,7 +257,7 @@ public class AdminServiceImpl implements AdminService{
 	public void menuManage(Parent root) {
 		// TODO Auto-generated method stub
 		dt=new dataTestImpl();
-		Stage menuManage = (Stage) root.getScene().getWindow();
+		Stage menuManage = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("2_menuManageUI.fxml"));
 		
 		Parent menu = null;
@@ -310,5 +313,7 @@ public class AdminServiceImpl implements AdminService{
 		menuManage.setTitle("메뉴설정");
 		menuManage.show();
 	}
+
+	
 
 }

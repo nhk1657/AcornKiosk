@@ -19,6 +19,6 @@ fx:controller="admin.Controller">
       </Label>
       <ScrollPane  fx:id="couponList">
       </ScrollPane>
-      <Button layoutX="417.0" layoutY="654.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="33.0" text="&lt;" />
+      
    </children>
 </Pane>

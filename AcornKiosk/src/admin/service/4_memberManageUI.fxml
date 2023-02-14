@@ -15,6 +15,6 @@
       </Label>
       <ScrollPane fx:id="memberList">
       </ScrollPane>
-      <Button layoutX="415.0" layoutY="636.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="&lt;" />
+      
    </children>
 </Pane>
