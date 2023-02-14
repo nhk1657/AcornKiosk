@@ -15,7 +15,7 @@ public class addOrderServiceImpl implements addOrderService{
 		
 		Stage payMethod = new Stage();
 		FXMLLoader loader = new FXMLLoader(
-				getClass().getResource("../payMethod.fxml"));
+				getClass().getResource("../payMethodUI.fxml"));
 		
 		Parent paymethod = null;
 		try {

@@ -32,7 +32,7 @@ public class addOrderMain extends Application{
 		od = new orderdataImpl();
 		
 		FXMLLoader loader = new FXMLLoader(
-				getClass().getResource("addOrder.fxml"));
+				getClass().getResource("addOrderUI.fxml"));
 		
 		Parent root = loader.load();
 		
