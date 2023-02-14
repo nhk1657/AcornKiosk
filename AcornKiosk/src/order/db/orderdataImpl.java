@@ -1,6 +1,7 @@
 package order.db;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,23 +36,29 @@ public class orderdataImpl implements orderdata{
 	
 	// TODO Auto-generated method stub
 
-	String sql = "select * from ordermenu";
+	String sql = "select * from orderMenu";
+	
 	List<orderMenu> orderList = new ArrayList<>();
-
+    
 	try {
 		pstmt = con.prepareStatement(sql);
-
 		rs = pstmt.executeQuery();
+		
 
 		while(rs.next()) {
+			
+			
 			orderMenu om = new orderMenu();
+			
 			om.setMenuid(rs.getInt(1));
 			om.setMenuname(rs.getString(2));
 			om.setMenuprice(rs.getInt(3));
 			om.setMenusell(rs.getInt(4));
+			System.out.println(2222);
 			System.out.println(om.getMenuid() + " " + om.getMenuname() +" "+ om.getMenuprice() +" " +om.getMenusell());
 
 			orderList.add(om);
+			System.out.println(1113);
 		}
 
 	}catch (Exception e) {

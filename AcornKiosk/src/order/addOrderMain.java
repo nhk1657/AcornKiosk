@@ -2,7 +2,6 @@ package order;
 
 import java.util.List;
 
-import admin.dataTest.Menu;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -39,8 +38,9 @@ public class addOrderMain extends Application{
 		//장바구니 db 가져오기
 		
 		ScrollPane sp = (ScrollPane)root.lookup("#orderList");
-		
+		System.out.println(1101);
 		TableView<orderMenu> orderTable = new TableView<>();
+		
 		TableColumn<orderMenu, String> menuid = new TableColumn<>("메뉴id");
 		menuid.setCellValueFactory(new PropertyValueFactory<>("menuid"));
 		menuid.setPrefWidth(100);
@@ -53,7 +53,7 @@ public class addOrderMain extends Application{
 		menuprice.setCellValueFactory(new PropertyValueFactory<>("menuprice"));
 		menuprice.setPrefWidth(100);
 		
-		TableColumn<orderMenu, String> menusell = new TableColumn<>("판매량");
+		TableColumn<orderMenu, String> menusell = new TableColumn<>("수량");
 		menusell.setCellValueFactory(new PropertyValueFactory<>("menusell"));
 		menusell.setPrefWidth(100);
 		
@@ -65,10 +65,10 @@ public class addOrderMain extends Application{
 		ObservableList <orderMenu> data =  FXCollections.observableArrayList(orderList);
 		
 		orderTable.setItems(data);
-		orderTable.setPrefSize(750, 1000);
+		orderTable.setPrefSize(400,1000);
 		
 		sp.setContent(orderTable);
-		sp.setPrefSize(400, 400);
+		sp.setPrefSize(400, 300);
 		sp.relocate(50, 175);
 		
 		
