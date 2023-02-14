@@ -13,44 +13,34 @@ import javafx.scene.Parent;
 import javafx.scene.control.Slider;
 
 
-public class TestController implements Initializable{
+public class TestController{
 
-	@FXML
-	private Parent root;
-	@FXML
-	private Parent selectpop;
-	@FXML
-	private Parent selectopt;
-	@FXML
-	private ActionEvent event;
-	@FXML
-	private Section se;
-	@FXML
-	private SelectSection ss;
-	@FXML
-	private SelectPop sp;
-	@FXML
-	private SelectOption so;
-	@FXML
-	private Slider slider;
 	
+	private Parent menuroot;
+	private Parent cof;
+	private Parent smo;
+	private Parent ade;
+	private Parent tea;
+	private Parent selectpop;
+	private Parent selectopt;
+	Section se;
+	SelectSection ss;
+	SelectPop sp;
+	Slider slider;
+	public void setRoot(Parent menuroot) {
+		// TODO Auto-generated method stub
+		this.menuroot = menuroot;
+		
+	}
 	public TestController() {
 		ss=new SelectSectionImpl();
 		se=new SectionImpl();
 		sp=new SelectPopImpl();
 	}
 	
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
-	}
 	
-	public void setRoot(Parent root) {
-		// TODO Auto-generated method stub
-		this.root = root;
-		
-	}
+	
+	
 	
 	public void setSectionUI(Parent selectpop) {
 		this.selectpop= selectpop;
@@ -64,7 +54,11 @@ public class TestController implements Initializable{
 	
 	
 	public void selectMenuProc() {
-		se.selectMenuProc(root); 
+		se.selectMenuProc(menuroot); 
+	}
+	
+	public void selectMenu2Proc() {
+		se.selectMenu2Proc(menuroot); 
 	}
 	
 	public void popClose(ActionEvent event) {
@@ -75,25 +69,32 @@ public class TestController implements Initializable{
 		sp.popChoice(event);
 	}
 	
-	public void popOption() {
-		sp.popOption(selectpop);
+	
+	
+	public void setcofbtn(Parent cof) {
+		this.cof=cof;
+	}
+	public void cofbtn() {
+		ss.cofbtn(menuroot);
+	}
+	public void setadebtn(Parent ade) {
+		this.ade=ade;
 	}
 	
-	public void optionChoice() {
-		so.optionChoice(selectopt);
+	public void adebtn() {
+		ss.adebtn(menuroot);
 	}
-	
-	public void optionClose() {
-		so.optionClose(selectopt);
+	public void setteabtn(Parent tea) {
+		this.tea=tea;
 	}
-	
-
-	@FXML public void selectSecBtn() {
-		ss.selectSecBtn(event, root);
+	public void teabtn() {
+		ss.teabtn(menuroot);
 	}
-	
-
-	
-	
+	public void setsmobtn(Parent smo) {
+		this.smo=smo;
+	}
+	public void smobtn() {
+		ss.smobtn(menuroot);
+	}
 	
 }

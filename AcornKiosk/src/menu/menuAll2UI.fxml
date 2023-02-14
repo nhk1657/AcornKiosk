@@ -9,7 +9,7 @@
       <VBox prefHeight="750.0" prefWidth="500.0">
       	<children>
       		<fx:include source="selectSectionUI.fxml"/>
-      		<fx:include source="sectionUI.fxml"/>
+      		<fx:include id="section" source="section2UI.fxml"/>
       		<fx:include source="outputsUI.fxml"/>
       	</children>
       </VBox>
