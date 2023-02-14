@@ -1,5 +1,6 @@
 package admin.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import admin.Controller;
@@ -10,9 +11,14 @@ import admin.dataTest.dataTest;
 import admin.dataTest.dataTestImpl;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
@@ -23,28 +29,28 @@ import javafx.stage.Stage;
 
 public class AdminServiceImpl implements AdminService{
 	dataTest dt;
+	Stage stage;
 
-
-	@Override
-	public void menuEdit(Parent root) {
-		// TODO Auto-generated method stub
-		Stage menuEdit = new Stage();
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("2.2_menuEditUI.fxml"));
-		
-		Parent menued = null;
-		try {
-			menued = loader.load();
-			
-			menuEdit.setScene(new Scene(menued));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		Controller ctrl = loader.getController();
-		ctrl.setMenuded(menued);
-		menuEdit.setTitle("메뉴 변경");
-		menuEdit.show();
-	}
+//	@Override
+//	public void menuEdit(Parent root) {
+//		// TODO Auto-generated method stub
+//		Stage menuEdit = new Stage();
+//		FXMLLoader loader = new FXMLLoader(getClass().getResource("2.2_menuEditUI.fxml"));
+//		
+//		Parent menued = null;
+//		try {
+//			menued = loader.load();
+//			
+//			menuEdit.setScene(new Scene(menued));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		Controller ctrl = loader.getController();
+//		ctrl.setMenuded(menued);
+//		menuEdit.setTitle("메뉴 변경");
+//		menuEdit.show();
+//	}
 
 	@Override
 	public void sales(Parent root) {
@@ -160,26 +166,26 @@ public class AdminServiceImpl implements AdminService{
 		memberManage.show();
 	}
 
-	@Override
-	public void memberEdit(Parent root) {
-		// TODO Auto-generated method stub
-		Stage memberEdit = new Stage();
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("4.2_memberEditUI.fxml"));
-		
-		Parent membered = null;
-		try {
-			membered = loader.load();
-			
-			memberEdit.setScene(new Scene(membered));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		Controller ctrl = loader.getController();
-		ctrl.setMembered(membered);
-		memberEdit.setTitle("쿠폰 관리");
-		memberEdit.show();
-	}
+//	@Override
+//	public void memberEdit(Parent root) {
+//		// TODO Auto-generated method stub
+//		Stage memberEdit = new Stage();
+//		FXMLLoader loader = new FXMLLoader(getClass().getResource("4.2_memberEditUI.fxml"));
+//		
+//		Parent membered = null;
+//		try {
+//			membered = loader.load();
+//			
+//			memberEdit.setScene(new Scene(membered));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		Controller ctrl = loader.getController();
+//		ctrl.setMembered(membered);
+//		memberEdit.setTitle("쿠폰 관리");
+//		memberEdit.show();
+//	}
 
 	@Override
 	public void couponManage(Parent root) {
@@ -232,22 +238,15 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public void endSystem(Parent root) {
 		// TODO Auto-generated method stub
-		Stage endSystem = (Stage) root.getScene().getWindow();
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("6_endSystemUI.fxml"));
-		
-		Parent end = null;
-		try {
-			end = loader.load();
-			
-			endSystem.setScene(new Scene(end));
-		} catch (Exception e) {
-			e.printStackTrace();
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("시스템종료");
+		alert.setHeaderText("시스템 종료");
+		alert.setContentText("시스템을 종료하시겠습니까?");
+		if(alert.showAndWait().get()==ButtonType.OK) {
+			stage=(Stage)root.getScene().getWindow();
+			System.out.println("시스템을 종료합니다.");
+			stage.close();
 		}
-		
-		Controller ctrl = loader.getController();
-		ctrl.setEnd(end);
-		endSystem.setTitle("시스템 종료");
-		endSystem.show();
 	}
 
 	@Override
@@ -275,26 +274,24 @@ public class AdminServiceImpl implements AdminService{
 		menuid.setPrefWidth(50);
 		TableColumn<Menu, String> menuname = new TableColumn<>("메뉴");
 		menuname.setCellValueFactory(new PropertyValueFactory<>("menuname"));
-		menuname.setPrefWidth(100);
+		menuname.setPrefWidth(150);
 		TableColumn<Menu, String> menuprice = new TableColumn<>("가격");
 		menuprice.setCellValueFactory(new PropertyValueFactory<>("menuprice"));
 		menuprice.setPrefWidth(100);
-		TableColumn<Menu, String> menuremains = new TableColumn<>("재고");
-		menuremains.setCellValueFactory(new PropertyValueFactory<>("menuremains"));
-		menuremains.setPrefWidth(100);
+		
 		
 		TableColumn<Menu, String> menusection = new TableColumn<>("메뉴 섹션");
 		menusection.setCellValueFactory(new PropertyValueFactory<>("menusection"));
 		menusection.setPrefWidth(100);
 		
-		menuTable.getColumns().addAll(menuid,menuname,menuprice,menuremains,menusection);
+		menuTable.getColumns().addAll(menuid,menuname,menuprice,menusection);
 		
 		
 		List<Menu> menuList = dt.selectMenu(); 
 		
 		ObservableList<Menu> data = FXCollections.observableArrayList(menuList);
 		menuTable.setItems(data);
-		menuTable.setPrefSize(450, 1000);
+		menuTable.setPrefSize(400, 1000);
 		
 		sp.setContent(menuTable);
 		//sp.getChildrenUnmodifiable().add(menuTable);
@@ -310,5 +307,97 @@ public class AdminServiceImpl implements AdminService{
 		menuManage.setTitle("메뉴설정");
 		menuManage.show();
 	}
+
+	@Override
+	public void menuback(Parent root) {
+		// TODO Auto-generated method stub
+		
+		
+		Stage back = (Stage) root.getScene().getWindow();
+		FXMLLoader loader = new FXMLLoader(
+				getClass().getResource("1_adminMenuUI.fxml"));
+		try {
+			root = loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Controller ctrl = loader.getController();
+		
+		ctrl.setRoot(root);
+		
+		back.setScene(new Scene(root));
+		back.setTitle("관리자모드");
+		back.show();
+	}
+
+	@Override
+	public void saleback(Parent root) {
+		// TODO Auto-generated method stub
+		Stage back = (Stage) root.getScene().getWindow();
+		FXMLLoader loader = new FXMLLoader(
+				getClass().getResource("1_adminMenuUI.fxml"));
+		try {
+			root = loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Controller ctrl = loader.getController();
+		
+		ctrl.setRoot(root);
+		
+		back.setScene(new Scene(root));
+		back.setTitle("관리자모드");
+		back.show();
+	}
+
+	@Override
+	public void memberback(Parent root) {
+		// TODO Auto-generated method stub
+		Stage back = (Stage) root.getScene().getWindow();
+		FXMLLoader loader = new FXMLLoader(
+				getClass().getResource("1_adminMenuUI.fxml"));
+		try {
+			root = loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Controller ctrl = loader.getController();
+		
+		ctrl.setRoot(root);
+		
+		back.setScene(new Scene(root));
+		back.setTitle("관리자모드");
+		back.show();
+	}
+
+	@Override
+	public void couponback(Parent root) {
+		// TODO Auto-generated method stub
+		Stage back = (Stage) root.getScene().getWindow();
+		FXMLLoader loader = new FXMLLoader(
+				getClass().getResource("1_adminMenuUI.fxml"));
+		try {
+			root = loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Controller ctrl = loader.getController();
+		
+		ctrl.setRoot(root);
+		
+		back.setScene(new Scene(root));
+		back.setTitle("관리자모드");
+		back.show();
+	}
+
+	
 
 }

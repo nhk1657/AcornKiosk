@@ -16,12 +16,12 @@ fx:controller="admin.Controller">
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button layoutX="42.0" layoutY="203.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="예">
+            <Button onAction="#yes" layoutX="42.0" layoutY="203.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="예">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="229.0" layoutY="203.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="아니오">
+            <Button onAction="no" layoutX="229.0" layoutY="203.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="아니오">
                <font>
                   <Font size="23.0" />
                </font>
