@@ -17,12 +17,12 @@ fx:controller="admin.Controller">
          <children>
             <VBox prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="190.0" text="ID">
+                  <Label  alignment="CENTER" prefHeight="50.0" prefWidth="190.0" text="ID">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="50.0" prefWidth="120.0" />
+                  <TextField fx:id="id" prefHeight="50.0" prefWidth="120.0" />
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="200.0">
@@ -32,7 +32,7 @@ fx:controller="admin.Controller">
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="50.0" prefWidth="120.0" />
+                  <TextField fx:id="name" prefHeight="50.0" prefWidth="120.0" />
                </children>
             </VBox>
          </children>
