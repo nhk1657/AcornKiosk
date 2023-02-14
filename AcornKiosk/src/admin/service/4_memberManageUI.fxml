@@ -13,6 +13,7 @@
             <Font size="36.0" />
          </font>
       </Label>
+      <Button onAction="#memberback" layoutX="400" layoutY="650" mnemonicParsing="false" prefHeight="40" prefWidth="40" text="&lt;" />
       <ScrollPane fx:id="memberList">
       </ScrollPane>
       

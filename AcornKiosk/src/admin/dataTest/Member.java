@@ -39,10 +39,10 @@ public String getEmail() {
 public void setEmail(String email) {
 	this.email = email;
 }
-public int getStamp() {
+public int getStamps() {
 	return stamps;
 }
-public void setStamp(int stamps) {
+public void setStamps(int stamps) {
 	this.stamps = stamps;
 }
 

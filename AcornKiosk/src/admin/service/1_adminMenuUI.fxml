@@ -10,42 +10,39 @@
    <children>
       <VBox alignment="CENTER" layoutX="65.0" layoutY="175.0" prefHeight="400.0" prefWidth="400.0" spacing="20.0">
          <children>
-            <Button onAction="#menuManage" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="메뉴 설정" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#menuManage" prefHeight="50.0" prefWidth="300.0" text="메뉴 설정" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button onAction="#sales" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="매출 확인" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#sales" prefHeight="50.0" prefWidth="300.0" text="매출 확인" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button onAction="#memberManage" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="회원 관리" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#memberManage" prefHeight="50.0" prefWidth="300.0" text="회원 관리" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button onAction="#couponManage" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="쿠폰 관리" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#couponManage" prefHeight="50.0" prefWidth="300.0" text="쿠폰 관리" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button onAction="#endSystem" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="시스템 종료" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#endSystem" prefHeight="50.0" prefWidth="300.0" text="시스템 종료" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
          </children>
       </VBox>
-      <Button onAction="#endAdmin" alignment="CENTER" layoutX="385.0" layoutY="606.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="40.0" text="&lt;" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
+      
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="114.0" prefHeight="53.0" prefWidth="280.0" text="관리자 모드" textAlignment="CENTER">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
+      <Button onAction="#adminback" layoutX="400" layoutY="650" mnemonicParsing="false" prefHeight="40" prefWidth="40" text="&lt;" />
    </children>
 </Pane>

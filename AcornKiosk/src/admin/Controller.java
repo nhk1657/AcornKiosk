@@ -55,33 +55,42 @@ public void endSystem() {
 public void setEnd(Parent end) {
 	this.end=end;
 }
-public void endAdmin() {
-	
-}
+//public void endAdmin() {
+//	
+//}
 public void setMenu(Parent menu) {
 	this.menu=menu;
 }
 public void menuManage() {
 	as.menuManage(root);
 }
-public void menuEdit() {
-	as.menuEdit(root);
-}
+//public void menuEdit() {
+//	as.menuEdit(root);
+//}
 public void setMenuded(Parent menued) {
 	// TODO Auto-generated method stub
 	this.menued=menued;
 }
-public void memberEdit() {
-	as.memberEdit(root);
-}
+//public void memberEdit() {
+//	as.memberEdit(root);
+//}
 public void setMembered(Parent membered) {
 	// TODO Auto-generated method stub
 	this.membered=membered;
 }
-public void yes() {
-	
+public void menuback(){
+	as.menuback(menu);
 }
-public void no() {
+public void saleback(){
+	as.saleback(sale);
+}
+public void memberback(){
+	as.memberback(member);
+}
+public void couponback(){
+	as.couponback(coupon);
+}
+public void adminback(){
 	
 }
 }
