@@ -31,33 +31,12 @@ public class AdminServiceImpl implements AdminService{
 	dataTest dt;
 	Stage stage;
 
-//	@Override
-//	public void menuEdit(Parent root) {
-//		// TODO Auto-generated method stub
-//		Stage menuEdit = new Stage();
-//		FXMLLoader loader = new FXMLLoader(getClass().getResource("2.2_menuEditUI.fxml"));
-//		
-//		Parent menued = null;
-//		try {
-//			menued = loader.load();
-//			
-//			menuEdit.setScene(new Scene(menued));
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		
-//		Controller ctrl = loader.getController();
-//		ctrl.setMenuded(menued);
-//		menuEdit.setTitle("메뉴 변경");
-//		menuEdit.show();
-//	}
-
 	@Override
-	public void sales(Parent root) {
+	public void sales(Parent adminSaleManage) {
 		// TODO Auto-generated method stub
 		dt=new dataTestImpl();
 		
-		Stage sales = (Stage) root.getScene().getWindow();
+		Stage sales = (Stage) adminSaleManage.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("3_salesUI.fxml"));
 		
 		Parent sale = null;
@@ -109,10 +88,10 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void membermManage(Parent root) {
+	public void membermManage(Parent adminMemberManage) {
 		// TODO Auto-generated method stub
 		dt=new dataTestImpl();
-		Stage memberManage = (Stage) root.getScene().getWindow();
+		Stage memberManage = (Stage) adminMemberManage.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("4_memberManageUI.fxml"));
 		
 		Parent member = null;
@@ -166,32 +145,11 @@ public class AdminServiceImpl implements AdminService{
 		memberManage.show();
 	}
 
-//	@Override
-//	public void memberEdit(Parent root) {
-//		// TODO Auto-generated method stub
-//		Stage memberEdit = new Stage();
-//		FXMLLoader loader = new FXMLLoader(getClass().getResource("4.2_memberEditUI.fxml"));
-//		
-//		Parent membered = null;
-//		try {
-//			membered = loader.load();
-//			
-//			memberEdit.setScene(new Scene(membered));
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		
-//		Controller ctrl = loader.getController();
-//		ctrl.setMembered(membered);
-//		memberEdit.setTitle("쿠폰 관리");
-//		memberEdit.show();
-//	}
-
 	@Override
-	public void couponManage(Parent root) {
+	public void couponManage(Parent adminCouponManage) {
 		// TODO Auto-generated method stub
 		dt=new dataTestImpl();
-		Stage couponManage = (Stage) root.getScene().getWindow();
+		Stage couponManage = (Stage) adminCouponManage.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("5_couponManageUI.fxml"));
 		
 		Parent coupon = null;
@@ -250,10 +208,10 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void menuManage(Parent root) {
+	public void menuManage(Parent adminMenuManage) {
 		// TODO Auto-generated method stub
 		dt=new dataTestImpl();
-		Stage menuManage = (Stage) root.getScene().getWindow();
+		Stage menuManage = (Stage) adminMenuManage.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("2_menuManageUI.fxml"));
 		
 		Parent menu = null;
@@ -309,15 +267,15 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void menuback(Parent root) {
+	public void menuback(Parent adminMenuManage) {
 		// TODO Auto-generated method stub
 		
 		
-		Stage back = (Stage) root.getScene().getWindow();
+		Stage back = (Stage) adminMenuManage.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("1_adminMenuUI.fxml"));
 		try {
-			root = loader.load();
+			adminMenuManage = loader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -325,21 +283,21 @@ public class AdminServiceImpl implements AdminService{
 		
 		Controller ctrl = loader.getController();
 		
-		ctrl.setRoot(root);
+		ctrl.setRoot(adminMenuManage);
 		
-		back.setScene(new Scene(root));
+		back.setScene(new Scene(menuBack));
 		back.setTitle("관리자모드");
 		back.show();
 	}
 
 	@Override
-	public void saleback(Parent root) {
+	public void saleback(Parent adminSaleManage) {
 		// TODO Auto-generated method stub
-		Stage back = (Stage) root.getScene().getWindow();
+		Stage back = (Stage) adminSaleManage.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("1_adminMenuUI.fxml"));
 		try {
-			root = loader.load();
+			adminSaleManage = loader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -347,21 +305,21 @@ public class AdminServiceImpl implements AdminService{
 		
 		Controller ctrl = loader.getController();
 		
-		ctrl.setRoot(root);
+		ctrl.setRoot(adminSaleManage);
 		
-		back.setScene(new Scene(root));
+		back.setScene(new Scene(adminSaleManage));
 		back.setTitle("관리자모드");
 		back.show();
 	}
 
 	@Override
-	public void memberback(Parent root) {
+	public void memberback(Parent adminMemberManage) {
 		// TODO Auto-generated method stub
-		Stage back = (Stage) root.getScene().getWindow();
+		Stage back = (Stage) adminMemberManage.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("1_adminMenuUI.fxml"));
 		try {
-			root = loader.load();
+			adminMemberManage = loader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -369,21 +327,21 @@ public class AdminServiceImpl implements AdminService{
 		
 		Controller ctrl = loader.getController();
 		
-		ctrl.setRoot(root);
+		ctrl.setRoot(adminMemberManage);
 		
-		back.setScene(new Scene(root));
+		back.setScene(new Scene(adminMemberManage));
 		back.setTitle("관리자모드");
 		back.show();
 	}
 
 	@Override
-	public void couponback(Parent root) {
+	public void couponback(Parent adminCouponManage) {
 		// TODO Auto-generated method stub
-		Stage back = (Stage) root.getScene().getWindow();
+		Stage back = (Stage) adminCouponManage.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("1_adminMenuUI.fxml"));
 		try {
-			root = loader.load();
+			adminCouponManage = loader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -391,9 +349,9 @@ public class AdminServiceImpl implements AdminService{
 		
 		Controller ctrl = loader.getController();
 		
-		ctrl.setRoot(root);
+		ctrl.setRoot(adminCouponManage);
 		
-		back.setScene(new Scene(root));
+		back.setScene(new Scene(adminCouponManage));
 		back.setTitle("관리자모드");
 		back.show();
 	}
