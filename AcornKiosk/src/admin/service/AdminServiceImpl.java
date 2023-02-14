@@ -330,6 +330,7 @@ public class AdminServiceImpl implements AdminService{
 		
 		ctrl.setRoot(adminMemberManage);
 		
+		
 		back.setScene(new Scene(adminMemberManage));
 		back.setTitle("관리자모드");
 		back.show();
