@@ -12,5 +12,6 @@ void menuback(Parent adminMenuManage);
 void saleback(Parent adminSaleManage);
 void memberback(Parent adminMemberManage);
 void couponback(Parent adminCouponManage);
+void endAdmin(Parent adminmenu);
 
 }

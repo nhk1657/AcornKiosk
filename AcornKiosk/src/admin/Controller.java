@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import member.service.LoginMain;
 
 public class Controller {
 	private Parent adminmenu;
@@ -71,7 +72,7 @@ public void couponback(){
 	as.couponback(adminCouponManage);
 }
 public void adminback(){
-	
+	as.endAdmin(adminmenu);
 }
 }
 

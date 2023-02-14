@@ -26,6 +26,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import member.service.LoginMain;
 
 public class AdminServiceImpl implements AdminService{
 	private static final Parent adminMenuManage = null;
@@ -355,6 +356,19 @@ public class AdminServiceImpl implements AdminService{
 		back.setScene(new Scene(adminCouponManage));
 		back.setTitle("관리자모드");
 		back.show();
+	}
+
+	@Override
+	public void endAdmin(Parent adminmenu) {
+		// TODO Auto-generated method stub
+		Stage back = (Stage) adminmenu.getScene().getWindow();
+		LoginMain lm= new LoginMain();
+		try {
+			lm.start(back);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
