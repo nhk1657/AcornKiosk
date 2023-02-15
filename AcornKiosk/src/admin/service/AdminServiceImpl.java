@@ -239,12 +239,7 @@ public class AdminServiceImpl implements AdminService{
 		menuprice.setCellValueFactory(new PropertyValueFactory<>("menuprice"));
 		menuprice.setPrefWidth(100);
 		
-		
-		TableColumn<Menu, String> menusection = new TableColumn<>("메뉴 섹션");
-		menusection.setCellValueFactory(new PropertyValueFactory<>("menusection"));
-		menusection.setPrefWidth(100);
-		
-		menuTable.getColumns().addAll(menuid,menuname,menuprice,menusection);
+		menuTable.getColumns().addAll(menuid,menuname,menuprice);
 		
 		
 		List<Menu> menuList = dt.selectMenu(); 

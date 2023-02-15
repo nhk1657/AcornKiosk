@@ -4,9 +4,7 @@ public class Menu {
 int menuid;
 String menuname;
 int menuprice;
-int menuremains;
 int menusell;
-int menusection;
 int menusale;
 public int getMenusale() {
 	return menusale;
@@ -32,23 +30,13 @@ public int getMenuprice() {
 public void setMenuprice(int menuprice) {
 	this.menuprice = menuprice;
 }
-public int getMenuremains() {
-	return menuremains;
-}
-public void setMenuremains(int menuremains) {
-	this.menuremains = menuremains;
-}
+
 public int getMenusell() {
 	return menusell;
 }
 public void setMenusell(int menusell) {
 	this.menusell = menusell;
 }
-public int getMenusection() {
-	return menusection;
-}
-public void setMenusection(int menusection) {
-	this.menusection = menusection;
-}
+
 
 }

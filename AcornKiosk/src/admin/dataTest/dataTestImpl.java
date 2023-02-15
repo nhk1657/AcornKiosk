@@ -35,6 +35,7 @@ public class dataTestImpl implements dataTest{
 		// TODO Auto-generated method stub
 		String sql = "select * from menu";
     	List<Menu> menuList = new ArrayList<>();
+    	    	
     	try {
 			pstmt = con.prepareStatement(sql);
 			
@@ -45,9 +46,8 @@ public class dataTestImpl implements dataTest{
 				m.setMenuid(rs.getInt(1));
 				m.setMenuname(rs.getString(2));
 				m.setMenuprice(rs.getInt(3));
-				m.setMenuremains(rs.getInt(4));
-				m.setMenusection(rs.getInt(6));
-				System.out.println(m.getMenuid()+" "+m.getMenuname()+" "+m.getMenuprice()+" "+m.getMenuremains()+" "+m.getMenusection());
+				
+				System.out.println(m.getMenuid()+" "+m.getMenuname()+" "+m.getMenuprice());
 				menuList.add(m);
 			}
 		} catch (Exception e) {
@@ -62,6 +62,7 @@ public class dataTestImpl implements dataTest{
 		// TODO Auto-generated method stub
 		String sql = "select * from menu";
     	List<Menu> saleList = new ArrayList<>();
+    	
     	try {
 			pstmt = con.prepareStatement(sql);
 			
@@ -71,7 +72,7 @@ public class dataTestImpl implements dataTest{
 				Menu m = new Menu();
 				m.setMenuname(rs.getString(2));
 				m.setMenuprice(rs.getInt(3));
-				m.setMenusell(rs.getInt(5));
+				m.setMenusell(rs.getInt(4));
 				m.setMenusale();
 				System.out.println(m.getMenuname()+" "+m.getMenuprice()+" "+m.getMenusell()+" "+m.getMenusale());
 				saleList.add(m);
@@ -80,6 +81,7 @@ public class dataTestImpl implements dataTest{
 			// TODO: handle exception
 			e.printStackTrace();
 		}
+    	
 		return saleList;
 	}
 
