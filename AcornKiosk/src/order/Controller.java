@@ -13,6 +13,7 @@ private addOrderService as;
 //order 결제 선택 Parent
 private Parent orderPay;
 private payMethodService ps;
+private Parent orderCancel;
 
 
 public Controller() {
@@ -28,11 +29,16 @@ public void setPayMehtod(Parent orderPay ) {
 	// TODO Auto-generated method stub
 	this.orderPay = orderPay;
 }
+
+public void setorderCancel(Parent orderCancel) {
+	this.orderCancel =orderCancel;
+}
 public void payProc() {
 	as.payProc(orderRoot);
 }
 public void cancelProc() {
 	//as.cancelProc(mainrootvalues);
+	as.cancelProc(orderRoot);
 }
 
 public void card() {

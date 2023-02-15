@@ -7,10 +7,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="order.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="order.Controller">
 	<children>
+      <Label alignment="CENTER" layoutX="-3.0" layoutY="113.0" prefHeight="18.0" prefWidth="506.0" text="주문하실 메뉴를 확인해주세요">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
 
-      		<ScrollPane fx:id="orderList" layoutX="43.0" layoutY="137.0">
+      		<ScrollPane fx:id="orderList" layoutX="77.0" layoutY="184.0">
 		</ScrollPane>
 		<Button layoutX="77.0" layoutY="617.0" mnemonicParsing="false" onAction="#payProc" prefHeight="66.0" prefWidth="150.0" style="-fx-background-color: #01AAFF;" text="결제" textFill="WHITE">
 			<font>
@@ -31,7 +36,12 @@
 				</Label>
 			</children>
 		</HBox>
-      <Label layoutX="85.0" layoutY="531.0" prefHeight="37.0" prefWidth="330.0" text="총 결제금액 : ">
+      <Label layoutX="77.0" layoutY="531.0" prefHeight="37.0" prefWidth="160.0" text="총 결제금액 : ">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="263.0" layoutY="531.0" prefHeight="37.0" prefWidth="160.0" text=" ">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
