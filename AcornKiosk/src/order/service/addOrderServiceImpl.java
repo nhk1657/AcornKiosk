@@ -7,9 +7,15 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.kioskMain;
 import order.Controller;
+import order.db.orderMenu;
+import order.db.orderdata;
+import order.db.orderdataImpl;
 
 public class addOrderServiceImpl implements addOrderService{
-
+	orderdata od;
+	orderMenu om;
+	
+	
 	@Override
 	public void payProc(Parent orderRoot) {
 		// TODO Auto-generated method stub
@@ -47,17 +53,22 @@ public class addOrderServiceImpl implements addOrderService{
 		// TODO Auto-generated method stub
 		//주문취소 버튼이 누르면, 메뉴선택 메인 페이지로 돌아감
 		//메인페이지 (로그인 페이지)Parent 값 받아서 보내기
+		od = new orderdataImpl();
 		
 		Stage orderCancel=(Stage)orderRoot.getScene().getWindow();
 		kioskMain km = new kioskMain();
 		
+		
 		try {
+		   
 			km.start(orderCancel);
+			
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		
-		
+		}
 	}
 
-}
+

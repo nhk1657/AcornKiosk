@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,18 +44,22 @@ public class orderdataImpl implements orderdata{
 	try {
 		pstmt = con.prepareStatement(sql);
 		rs = pstmt.executeQuery();
-		
+		orderMenu om = new orderMenu();
 
+		om.SumZero();
 		while(rs.next()) {
-			
-			
-			orderMenu om = new orderMenu();
 			
 			om.setMenuid(rs.getInt(1));
 			om.setMenuname(rs.getString(2));
 			om.setMenuprice(rs.getInt(3));
 			om.setMenusell(rs.getInt(4));
-			System.out.println(om.getMenuid() + " " + om.getMenuname() +" "+ om.getMenuprice() +" " +om.getMenusell());
+			
+			om.setSale();
+			//sum+=om.getSale();
+			//System.out.println("Before="+om.getSum());
+			om.setSum();
+			//System.out.println("After="+om.getSum());
+			System.out.println(om.getMenuid() + " " + om.getMenuname() +" "+ om.getMenuprice() +" " +om.getMenusell()+ " "+ om.getSale()+ " "+ om.getSum());
 
 			orderList.add(om);
 			
@@ -67,4 +72,29 @@ public class orderdataImpl implements orderdata{
 	return orderList;
 
 }
+	
+//	public void delOrder() throws SQLException {
+//		// TODO Auto-generated method stub
+//		String sql="delect  from  orderMenu";
+//		pstmt = con.prepareStatement(sql);
+//		
+//	}
+	
+	
+	@Override
+	public boolean deleteOrder() {
+		// TODO Auto-generated method stub
+		try {
+			System.out.println(7777);
+			String sql="delete from  orderMenu";
+	
+			pstmt = con.prepareStatement(sql);
+			//orderList.
+			System.out.println(8888);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return true;
+	}
 }

@@ -1,6 +1,9 @@
 package order;
 
 import javafx.scene.Parent;
+import order.db.orderMenu;
+import order.db.orderdata;
+import order.db.orderdataImpl;
 import order.service.addOrderService;
 import order.service.addOrderServiceImpl;
 import order.service.payMethodService;
@@ -14,11 +17,13 @@ private addOrderService as;
 private Parent orderPay;
 private payMethodService ps;
 private Parent orderCancel;
-
+private orderdata od;
+private orderMenu om;
 
 public Controller() {
 	as = new addOrderServiceImpl();
 	ps = new payMethodServiceImpl();
+	od = new orderdataImpl();
 }
 
 public void setRoot(Parent orderRoot) {
@@ -37,8 +42,10 @@ public void payProc() {
 	as.payProc(orderRoot);
 }
 public void cancelProc() {
-	//as.cancelProc(mainrootvalues);
+	
 	as.cancelProc(orderRoot);
+	od.deleteOrder();
+	
 }
 
 public void card() {
