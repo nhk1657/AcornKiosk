@@ -6,20 +6,20 @@ import javafx.scene.Parent;
 
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import menu.db.MenuTest;
-import menu.db.MenuTestImpl;
-import menu.db.Orders;
+import menu.db.MenuData;
+import menu.db.MenuDataImpl;
+import menu.db.OrderMenu;
 
 
 public class SelectPopImpl implements SelectPop{
-	MenuTest mt=new MenuTestImpl();
+	MenuData mt=new MenuDataImpl();
 	SectionImpl se=new SectionImpl();
 	OutputsImpl op = new OutputsImpl();
 	static int menu_sell=0;
 	static int tempers=0;
 	static int size=0;
 	static int sugar=0;
-	Orders odrm=new Orders();
+	OrderMenu odrm=new OrderMenu();
 
 	@Override
 	public void popClose(ActionEvent event) {
@@ -42,7 +42,9 @@ public class SelectPopImpl implements SelectPop{
 			e.printStackTrace();
 		}
 		if(menu_sell!=0) {
-			se.menu_price= se.menu_price+tempers+size+sugar;
+			
+			int addcost=tempers+size+sugar+se.menu_price;
+			se.menu_price=addcost;
 			odrm.setMenuid(se.menu_id);
 			odrm.setMenuname(se.menu_name);
 			odrm.setMenuprice(se.menu_price);

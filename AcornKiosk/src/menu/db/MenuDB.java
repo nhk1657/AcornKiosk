@@ -1,6 +1,6 @@
 package menu.db;
 
-public class MenuMen {
+public class MenuDB {
 	int menuID;
 	String menuName;
 	int menuPrice;

@@ -15,14 +15,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import main.kioskMain;
-import menu.db.MenuTestImpl;
-import menu.db.Orders;
+import menu.db.MenuDataImpl;
+import menu.db.OrderMenu;
 import order.addOrderMain;
 
 
 
 public class OutputsImpl implements Outputs{
-	MenuTestImpl mt = new MenuTestImpl();
+	MenuDataImpl mt = new MenuDataImpl();
 	@Override
 	public void menuSelect(Parent menuroot) {
 		// TODO Auto-generated method stub
@@ -41,23 +41,23 @@ public class OutputsImpl implements Outputs{
 		
 		ScrollPane sp = (ScrollPane) menuroot1.lookup("#orderlist");
 		
-		TableView<Orders> ordertable = new TableView<>();
-		TableColumn<Orders, String> menuname = new TableColumn<>("메뉴");
+		TableView<OrderMenu> ordertable = new TableView<>();
+		TableColumn<OrderMenu, String> menuname = new TableColumn<>("메뉴");
 		menuname.setCellValueFactory(new PropertyValueFactory<>("menuname"));
 		menuname.setPrefWidth(115);
-		TableColumn<Orders, String> menuprice = new TableColumn<>("가격");
+		TableColumn<OrderMenu, String> menuprice = new TableColumn<>("가격");
 		menuprice.setCellValueFactory(new PropertyValueFactory<>("menuprice"));
 		menuprice.setPrefWidth(90);
-		TableColumn<Orders, String> menusell = new TableColumn<>("판매량");
+		TableColumn<OrderMenu, String> menusell = new TableColumn<>("판매량");
 		menusell.setCellValueFactory(new PropertyValueFactory<>("menusell"));
 		menusell.setPrefWidth(90);
 		
 		ordertable.getColumns().addAll(menuname,menuprice,menusell);
 		
-		List<Orders> orderlist = mt.menuoutput();
+		List<OrderMenu> orderlist = mt.menuoutput();
 
 		
-		ObservableList<Orders> data = FXCollections.observableArrayList(orderlist);
+		ObservableList<OrderMenu> data = FXCollections.observableArrayList(orderlist);
 		ordertable.setItems(data);
 		ordertable.setPrefSize(295, 150);
 		

@@ -2,7 +2,7 @@ package menu.db;
 
 
 
-public class Orders {
+public class OrderMenu {
 	int menuid;
 	String menuname;
 	//주문가격 + 유료/무료옵션 가격도 추가

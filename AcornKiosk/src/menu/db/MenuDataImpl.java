@@ -14,13 +14,13 @@ import order.db.orderMenu;
 
 
 
-public class MenuTestImpl implements MenuTest{
+public class MenuDataImpl implements MenuData{
 	int ordercnt=1;
 	Connection con;
 	ResultSet rs;
 	PreparedStatement pstmt;
 	
-	public MenuTestImpl(){
+	public MenuDataImpl(){
 		
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 		String user = "system";
@@ -38,17 +38,17 @@ public class MenuTestImpl implements MenuTest{
 	}
 	
 	@Override
-	public List<MenuMen> menus() {
+	public List<MenuDB> menus() {
 		// TODO Auto-generated method stub
 		String sql = "select * from menu ";
-    	List<MenuMen> menuList = new ArrayList<>();
+    	List<MenuDB> menuList = new ArrayList<>();
     	try {
 			pstmt = con.prepareStatement(sql);
 			
 			rs= pstmt.executeQuery();
 			
 			while(rs.next()) {
-				MenuMen m = new MenuMen();
+				MenuDB m = new MenuDB();
 				m.setMenuID(rs.getInt(1));
 				m.setMenuName(rs.getString(2));
 				m.setMenuPrice(rs.getInt(3));
@@ -96,7 +96,9 @@ public class MenuTestImpl implements MenuTest{
 			pstmt.setInt(1, menuid);
 			rs=pstmt.executeQuery();
 			if(rs.next()){
+				System.out.println(rs.getInt("menuPrice"));
 				price=rs.getInt("menuPrice");
+				System.out.println(price);
 			}
 			
 		}catch (Exception e) {
@@ -147,9 +149,9 @@ public class MenuTestImpl implements MenuTest{
 	}
 
 	@Override
-	public boolean input(Orders od) {
+	public boolean input(OrderMenu od) {
 		// TODO Auto-generated method stub
-		String sql = "INSERT INTO orders VALUES(?,?,?,?)";
+		String sql = "INSERT INTO orderMenu VALUES(?,?,?,?)";
 		int result=0;
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -172,18 +174,18 @@ public class MenuTestImpl implements MenuTest{
 	}
 	
 	@Override
-	public List<Orders> menuoutput() {
+	public List<OrderMenu> menuoutput() {
 	
 	// TODO Auto-generated method stub
 	String sql = "select * from orders";
-	List<Orders> orders = new ArrayList<>();
+	List<OrderMenu> orders = new ArrayList<>();
     
 	try {
 		pstmt = con.prepareStatement(sql);
 		rs = pstmt.executeQuery();
 		
 		while(rs.next()) {		
-			Orders ods = new Orders();
+			OrderMenu ods = new OrderMenu();
 			
 			ods.setMenuid(rs.getInt(1));
 			ods.setMenuname(rs.getString(2));

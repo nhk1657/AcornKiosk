@@ -9,28 +9,29 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import menu.db.MenuMen;
-import menu.db.MenuTest;
-import menu.db.MenuTestImpl;
-import menu.db.Orders;
+import menu.db.MenuDB;
+import menu.db.MenuData;
+import menu.db.MenuDataImpl;
+import menu.db.OrderMenu;
 import order.db.orderMenu;
 
 public class SectionImpl implements Section{
-	MenuTest mt;
+	MenuData mt;
 	static int menu_id;
 	static String menu_name;
 	static int menu_price;
 	SelectSectionImpl ss=new SelectSectionImpl();
 	
 	public SectionImpl(){
-		mt = new MenuTestImpl();
+		mt = new MenuDataImpl();
 	}
 	@Override
 	public void selectMenu1Proc(Parent root) {
 		// TODO Auto-generated method stub
 		menu_id=1;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
+		System.out.println(menu_price);
 		Stage selectPopUI =  new Stage();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));
@@ -57,7 +58,7 @@ public class SectionImpl implements Section{
 		// TODO Auto-generated method stub
 		menu_id=2;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
 		Stage selectPopUI = new Stage();
 		System.out.println();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));
@@ -81,7 +82,7 @@ public class SectionImpl implements Section{
 		// TODO Auto-generated method stub
 		menu_id=3;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
 		Stage selectPopUI =  new Stage();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));
@@ -107,7 +108,7 @@ public class SectionImpl implements Section{
 		// TODO Auto-generated method stub
 		menu_id=4;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
 		Stage selectPopUI =  new Stage();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));
@@ -133,7 +134,7 @@ public class SectionImpl implements Section{
 		// TODO Auto-generated method stub
 		menu_id=5;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
 		Stage selectPopUI =  new Stage();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));
@@ -159,7 +160,7 @@ public class SectionImpl implements Section{
 		// TODO Auto-generated method stub
 		menu_id=6;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
 		Stage selectPopUI =  new Stage();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));
@@ -185,7 +186,7 @@ public class SectionImpl implements Section{
 		// TODO Auto-generated method stub
 		menu_id=7;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
 		Stage selectPopUI =  new Stage();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));
@@ -211,7 +212,7 @@ public class SectionImpl implements Section{
 		// TODO Auto-generated method stub
 		menu_id=8;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
 		Stage selectPopUI =  new Stage();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));
@@ -237,7 +238,7 @@ public class SectionImpl implements Section{
 		// TODO Auto-generated method stub
 		menu_id=9;
 		menu_name=mt.menuName((ss.secnum*10)+menu_id);
-		menu_price=mt.menuPrice(mt.menuPrice((ss.secnum*10)+menu_id));
+		menu_price=mt.menuPrice((ss.secnum*10)+menu_id);
 		Stage selectPopUI =  new Stage();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("selectPopUI.fxml"));

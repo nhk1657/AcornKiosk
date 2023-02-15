@@ -11,7 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Slider;
-import menu.db.Orders;
+import menu.db.OrderMenu;
 
 
 public class Controller{

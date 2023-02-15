@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import menu.db.Orders;
+import menu.db.OrderMenu;
 
 
 public class MenuMain extends Application{
