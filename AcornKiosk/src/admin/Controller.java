@@ -13,85 +13,66 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import member.service.LoginMain;
 
 public class Controller {
-	private Parent root;
-	private Stage stage;
-	private Parent menu;
-	private Parent sale;
-	private Parent member;
-	private Parent coupon;
-	private Parent end;
-	private Parent menued;
-	private Parent membered;
+	private Parent adminmenu;
+	
+	private Parent adminMenuManage;
+	private Parent adminSaleManage;
+	private Parent adminMemberManage;
+	private Parent adminCouponManage;
+	
 	AdminService as;
-public void setRoot(Parent root) {
-	this.root = root;
+public void setRoot(Parent adminmenu) {
+	this.adminmenu = adminmenu;
 }
 public Controller() {
 	as=new AdminServiceImpl();
 }
 public void sales() {
-	as.sales(root);
+	as.sales(adminmenu);
 }
-public void setSale(Parent sale) {
-	this.sale=sale;
+public void setSale(Parent adminSaleManage) {
+	this.adminSaleManage=adminSaleManage;
 }
 public void memberManage() {
-	as.membermManage(root);
+	as.membermManage(adminmenu);
 }
-public void setMember(Parent member) {
-	this.member=member;
+public void setMember(Parent adminMemberManage) {
+	this.adminMemberManage=adminMemberManage;
 }
 public void couponManage() {
-	as.couponManage(root);
+	as.couponManage(adminmenu);
 }
-public void setCoupon(Parent coupon) {
-	this.coupon=coupon;
+public void setCoupon(Parent adminCouponManage) {
+	this.adminCouponManage=adminCouponManage;
 }
 public void endSystem() {
-	as.endSystem(root);
+	as.endSystem(adminmenu);
 }
-public void setEnd(Parent end) {
-	this.end=end;
-}
-//public void endAdmin() {
-//	
-//}
-public void setMenu(Parent menu) {
-	this.menu=menu;
+
+public void setMenu(Parent adminMenuManage) {
+	this.adminMenuManage=adminMenuManage;
 }
 public void menuManage() {
-	as.menuManage(root);
+	as.menuManage(adminmenu);
 }
-//public void menuEdit() {
-//	as.menuEdit(root);
-//}
-public void setMenuded(Parent menued) {
-	// TODO Auto-generated method stub
-	this.menued=menued;
-}
-//public void memberEdit() {
-//	as.memberEdit(root);
-//}
-public void setMembered(Parent membered) {
-	// TODO Auto-generated method stub
-	this.membered=membered;
-}
+
 public void menuback(){
-	as.menuback(menu);
+	as.menuback(adminMenuManage);
 }
 public void saleback(){
-	as.saleback(sale);
+	as.saleback(adminSaleManage);
 }
 public void memberback(){
-	as.memberback(member);
+	as.memberback(adminMemberManage);
 }
 public void couponback(){
-	as.couponback(coupon);
+	as.couponback(adminCouponManage);
 }
 public void adminback(){
-	
+	as.endAdmin(adminmenu);
 }
 }
 

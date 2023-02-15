@@ -3,40 +3,26 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="menu.TestController">
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.Controller">
    <children>
       <HBox prefHeight="150.0" prefWidth="500.0" spacing="5.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #01AAFF;">
-               <children>
-                  <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label text="음료명" />
-                  <Label text="개수" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #01AAFF;">
-               <children>
-                  <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label text="음료명" />
-                  <Label text="개수" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #01AAFF;">
-               <children>
-                  <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label text="음료명" />
-                  <Label text="개수" />
-               </children>
-            </VBox>
+            <TableView id="orderlist" prefHeight="150.0" prefWidth="295.0" style="-fx-border-color: #01AAFF;">
+              <columns>
+                <TableColumn prefWidth="115.0" text="메뉴명" fx:id="menuname"/>
+                <TableColumn prefWidth="90.0" text="가격" fx:id="price"/>
+                  <TableColumn prefWidth="90.0" text="개수" fx:id="counts"/>
+              </columns>
+            </TableView>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="80.0" prefWidth="90.0" style="-fx-border-color: #01AAFF;" text="총 가격" />
+                  <Label alignment="CENTER" id="allcost" prefHeight="80.0" prefWidth="90.0" style="-fx-border-color: #01AAFF;" text="총 가격" />
                   <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff" />
                </children>
             </VBox>

@@ -1,51 +1,112 @@
 package menu;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
+
 import javafx.scene.Parent;
-import javafx.scene.Scene;
+
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import menu.db.MenuData;
+import menu.db.MenuDataImpl;
+import menu.db.OrderMenu;
+
 
 public class SelectPopImpl implements SelectPop{
+	MenuData mt=new MenuDataImpl();
+	SectionImpl se=new SectionImpl();
+	SelectSectionImpl ss = new SelectSectionImpl();
+	OutputsImpl op = new OutputsImpl();
+	static int menu_sell=0;
+	static int tempers=0;
+	static int size=0;
+	static int sugar=0;
+	OrderMenu odrm=new OrderMenu();
 
 	@Override
 	public void popClose(ActionEvent event) {
 		// TODO Auto-generated method stub
+		se.menu_id=0;
+		se.menu_name=null;
+		se.menu_price=0;
 		Parent close =(Parent) event.getSource();
 		Stage ClosePop = (Stage) close.getScene().getWindow();
 		ClosePop.close();
 	}
 
 	@Override
-	public void popChoice(ActionEvent event) {
+	public void popChoice(ActionEvent event, Parent pop, Parent menuroot) {
 		// TODO Auto-generated method stub
-		Parent choice =(Parent) event.getSource();
-		Stage ChoicePop = (Stage) choice.getScene().getWindow();
-		ChoicePop.close();
+		TextField cnts=(TextField) pop.lookup("#counts");
+		try{
+			menu_sell=(Integer.parseInt(cnts.getText()));
+		}catch(NumberFormatException e) {
+			e.printStackTrace();
+		}
+		if(menu_sell!=0) {
+			
+			int addcost=tempers+size+sugar+se.menu_price;
+			se.menu_price=addcost;
+			odrm.setMenuid(se.menu_id+(ss.secnum*10));
+			odrm.setMenuname(se.menu_name);
+			odrm.setMenuprice(se.menu_price);
+			odrm.setMenusell(menu_sell);
+			mt.input(odrm);
+			Parent choice =(Parent) event.getSource();
+			Stage ChoicePop = (Stage) choice.getScene().getWindow();
+			ChoicePop.close();
+		}else {
+			
+		}
 	}
 
 	@Override
-	public void popOption(Parent selectpop) {
+	public void hot(Parent pop) {
 		// TODO Auto-generated method stub
-		Stage selectOptionUI = (Stage) selectpop.getScene().getWindow();
-		FXMLLoader loader = new FXMLLoader(
-				getClass().getResource("selectOptionUI.fxml"));
-		
-		Parent selectoption = null;
-		try {
-			selectoption = loader.load();
-			
-			selectOptionUI.setScene(new Scene(selectoption));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		TestController ctrl = loader.getController();
-		ctrl.setSectionUI(selectoption);
-		
-		
-		selectOptionUI.setTitle("옵션 선택");
-		selectOptionUI.show();
+		tempers=0;
 	}
+
+	@Override
+	public void cold(Parent pop) {
+		// TODO Auto-generated method stub
+		tempers=300;
+	}
+
+	@Override
+	public void counts(Parent pop) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sizesmall(Parent pop) {
+		// TODO Auto-generated method stub
+		size=0;
+	}
+
+	@Override
+	public void sizemid(Parent pop) {
+		// TODO Auto-generated method stub
+		size=500;
+	}
+
+	@Override
+	public void sizelarge(Parent pop) {
+		// TODO Auto-generated method stub
+		size=1000;
+	}
+
+	@Override
+	public void sugarsmall(Parent pop) {
+		// TODO Auto-generated method stub
+		sugar=0;
+	}
+
+	@Override
+	public void sugarlarge(Parent pop) {
+		// TODO Auto-generated method stub
+		sugar=500;
+	}
+
+	
 
 }

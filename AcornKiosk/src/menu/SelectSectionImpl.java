@@ -3,50 +3,110 @@ package menu;
 
 
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.IOException;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class SelectSectionImpl implements SelectSection, Initializable{
+public class SelectSectionImpl implements SelectSection{
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
-	}
+	Stage stage;
+	static int secnum=0;
 	
-	Image Img1 = new Image(getClass().getResource("/menuImg/coffee/1.png").toExternalForm());
 	@Override
-	public void selectSecBtn(ActionEvent event, Parent root) {
+	public void cofbtn(Parent root) {
 		// TODO Auto-generated method stub
-		//해야될 거 한 섹션 누르면 다른 버튼 섹션 강제 비활성화
-		//섹션 버튼  누르면 색 변경
-		Button btncof= new Button();
+		//이전화면 안꺼짐 왜지?
+		Stage Cofbtn = (Stage) root.getScene().getWindow();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu/menuAll1UI.fxml"));
 		
-		btncof.setOnAction(new EventHandler<ActionEvent>() {
-			
-			@Override
-			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
-				btncof.setTextFill(Color.web("#FFFFFF"));
-				
-			}
-		});
+		Parent cof=null;
+		try {
+			cof = loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		Button btnImg1 = new Button();
+		Controller ctrl = loader.getController();
+		ctrl.setmenu(cof);
 		
-		btnImg1.setGraphic(new ImageView(Img1));
+		Cofbtn.setScene(new Scene(cof));
+		Cofbtn.setTitle("주문목록");
+		Cofbtn.show();
+		secnum=0;
+	}
+
+	@Override
+	public void smobtn(Parent root) {
+		// TODO Auto-generated method stub
+		Parent smo=null;
 		
+		Stage Smobtn =(Stage) root.getScene().getWindow();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu/menuAll2UI.fxml"));
+		
+		try {
+			smo=loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Controller ctr = loader.getController();
+		ctr.setmenu(smo);
+		
+		
+		Smobtn.setScene(new Scene(smo));
+		Smobtn.setTitle("주문목록");
+		Smobtn.show();
+		secnum=1;
+	}
+
+	@Override
+	public void adebtn(Parent root) {
+		// TODO Auto-generated method stub
+		Parent ade=null;
+		Stage Adebtn = (Stage) root.getScene().getWindow();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu/menuAll3UI.fxml"));
+		
+		try {
+			ade=loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Controller ctr = loader.getController();
+		ctr.setmenu(ade);
+		
+		
+		Adebtn.setScene(new Scene(ade));
+		Adebtn.setTitle("주문목록");
+		Adebtn.show();
+		secnum=2;
+	}
+
+	@Override
+	public void teabtn(Parent root) {
+		// TODO Auto-generated method stub
+		Parent tea=null;
+		Stage Teabtn = (Stage) root.getScene().getWindow();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu/menuAll4UI.fxml"));
+		
+		try {
+			tea=loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Controller ctr = loader.getController();
+		ctr.setmenu(tea);
+		
+		
+		Teabtn.setScene(new Scene(tea));
+		Teabtn.setTitle("주문목록");
+		Teabtn.show();
+		secnum=3;
 	}
 
 	

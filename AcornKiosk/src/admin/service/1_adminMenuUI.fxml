@@ -6,31 +6,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: #011638;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.Controller">
    <children>
-      <VBox alignment="CENTER" layoutX="65.0" layoutY="175.0" prefHeight="400.0" prefWidth="400.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="-1.0" layoutY="175.0" prefHeight="400.0" prefWidth="500.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#menuManage" prefHeight="50.0" prefWidth="300.0" text="메뉴 설정" textAlignment="CENTER">
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#menuManage" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="메뉴 설정" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#sales" prefHeight="50.0" prefWidth="300.0" text="매출 확인" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#sales" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="매출 확인" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#memberManage" prefHeight="50.0" prefWidth="300.0" text="회원 관리" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#memberManage" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="회원 관리" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#couponManage" prefHeight="50.0" prefWidth="300.0" text="쿠폰 관리" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#couponManage" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="쿠폰 관리" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#endSystem" prefHeight="50.0" prefWidth="300.0" text="시스템 종료" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#endSystem" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="시스템 종료" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -38,11 +38,11 @@
          </children>
       </VBox>
       
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="114.0" prefHeight="53.0" prefWidth="280.0" text="관리자 모드" textAlignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="114.0" prefHeight="53.0" prefWidth="500.0" text="관리자 모드" textAlignment="CENTER" textFill="#fffefe">
          <font>
-            <Font size="24.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <Button onAction="#adminback" layoutX="400" layoutY="650" mnemonicParsing="false" prefHeight="40" prefWidth="40" text="&lt;" />
+      <Button layoutX="400" layoutY="650" mnemonicParsing="false" onAction="#adminback" prefHeight="40" prefWidth="40" text="&lt;" />
    </children>
 </Pane>

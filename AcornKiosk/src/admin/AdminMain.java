@@ -1,6 +1,5 @@
 package admin;
 
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,13 +13,13 @@ public void start(Stage primaryStage) throws Exception {
 	FXMLLoader loader = new FXMLLoader(
 			getClass().getResource("service/1_adminMenuUI.fxml"));
 	
-	Parent root = loader.load();
+	Parent adminmenu = loader.load();
 	
 	Controller ctrl = loader.getController();
 	
-	ctrl.setRoot(root);
+	ctrl.setRoot(adminmenu);
 	
-	primaryStage.setScene(new Scene(root));
+	primaryStage.setScene(new Scene(adminmenu));
 	primaryStage.setTitle("관리자모드");
 	primaryStage.show();
 }
