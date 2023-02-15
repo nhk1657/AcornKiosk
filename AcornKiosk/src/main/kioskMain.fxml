@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: #D2D2D0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.kioskController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: #D2D2D0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.kioskController">
    <children>
       <ImageView fitHeight="621.0" fitWidth="404.0" layoutX="96.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@mainimg/mainimg.png" />
          </image>
       </ImageView>
-      <Button alignment="CENTER" layoutY="556.0" mnemonicParsing="false" prefHeight="194.0" prefWidth="500.0" style="-fx-background-color: #FFD900;" text="TOUCH TO START ">
+      <Button onAction="#Letstart" alignment="CENTER" layoutY="556.0" mnemonicParsing="false" prefHeight="194.0" prefWidth="500.0" style="-fx-background-color: #FFD900;" text="TOUCH TO START ">
          <font>
             <Font name="Calibri Bold" size="36.0" />
          </font>

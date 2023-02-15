@@ -29,9 +29,9 @@ import javafx.stage.Stage;
 import member.service.LoginMain;
 
 public class AdminServiceImpl implements AdminService{
-	private static final Parent adminMenuManage = null;
-	dataTest dt;
-	Stage stage;
+	private Parent adminMenuManage = null;
+	private dataTest dt;
+	private Stage stage;
 
 	@Override
 	public void sales(Parent adminSaleManage) {
