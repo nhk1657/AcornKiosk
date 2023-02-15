@@ -14,6 +14,7 @@ import menu.db.OrderMenu;
 public class SelectPopImpl implements SelectPop{
 	MenuData mt=new MenuDataImpl();
 	SectionImpl se=new SectionImpl();
+	SelectSectionImpl ss = new SelectSectionImpl();
 	OutputsImpl op = new OutputsImpl();
 	static int menu_sell=0;
 	static int tempers=0;
@@ -45,7 +46,7 @@ public class SelectPopImpl implements SelectPop{
 			
 			int addcost=tempers+size+sugar+se.menu_price;
 			se.menu_price=addcost;
-			odrm.setMenuid(se.menu_id);
+			odrm.setMenuid(se.menu_id+(ss.secnum*10));
 			odrm.setMenuname(se.menu_name);
 			odrm.setMenuprice(se.menu_price);
 			odrm.setMenusell(menu_sell);
@@ -53,7 +54,6 @@ public class SelectPopImpl implements SelectPop{
 			Parent choice =(Parent) event.getSource();
 			Stage ChoicePop = (Stage) choice.getScene().getWindow();
 			ChoicePop.close();
-			op.menuSelect(menuroot);
 		}else {
 			
 		}

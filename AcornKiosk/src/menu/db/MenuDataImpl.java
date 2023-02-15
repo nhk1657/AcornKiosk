@@ -38,7 +38,7 @@ public class MenuDataImpl implements MenuData{
 	}
 	
 	@Override
-	public List<MenuDB> menus() {
+	public List<MenuDB> menus(){
 		// TODO Auto-generated method stub
 		String sql = "select * from menu ";
     	List<MenuDB> menuList = new ArrayList<>();
@@ -66,7 +66,7 @@ public class MenuDataImpl implements MenuData{
 	
 	
 	@Override
-	public String menuName(int menuid) {
+	public String menuName(int menuid){
 		String sql = "SELECT menuName FROM menu where menuID = ?";
 		String name = null;
 		try {
@@ -77,7 +77,7 @@ public class MenuDataImpl implements MenuData{
 				name=rs.getString("menuName");
 			}
 			
-		}catch (Exception e) {
+		}catch (Exception e){
 			// TODO: handle exception
 			e.printStackTrace();
 			name= "err";		
@@ -87,7 +87,7 @@ public class MenuDataImpl implements MenuData{
 	}
 
 	@Override
-	public int menuPrice(int menuid) {
+	public int menuPrice(int menuid){
 		// TODO Auto-generated method stub
 		String sql = "SELECT menuPrice FROM menu where menuID = ?";
 		int price = 0;
@@ -111,7 +111,7 @@ public class MenuDataImpl implements MenuData{
 	}
 
 	@Override
-	public String orderName(int searchid) {
+	public String orderName(int searchid){
 		// TODO Auto-generated method stub
 		String name=null;
 		String sql="SELECT Name FROM orders where id=?";
@@ -130,7 +130,7 @@ public class MenuDataImpl implements MenuData{
 	}
 
 	@Override
-	public int orderPrice(int searchid) {
+	public int orderPrice(int searchid){
 		// TODO Auto-generated method stub
 		int price=0;
 		String sql="SELECT Price FROM orders where id=?";
@@ -149,7 +149,7 @@ public class MenuDataImpl implements MenuData{
 	}
 
 	@Override
-	public boolean input(OrderMenu od) {
+	public boolean input(OrderMenu od){
 		// TODO Auto-generated method stub
 		String sql = "INSERT INTO orderMenu VALUES(?,?,?,?)";
 		int result=0;
@@ -174,7 +174,7 @@ public class MenuDataImpl implements MenuData{
 	}
 	
 	@Override
-	public List<OrderMenu> menuoutput() {
+	public List<OrderMenu> menuoutput(){
 	
 	// TODO Auto-generated method stub
 	String sql = "select * from orders";
