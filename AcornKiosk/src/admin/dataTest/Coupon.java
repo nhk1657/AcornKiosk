@@ -8,6 +8,7 @@ String memId;
 Date usedDate;
 public Date getUsedDate() {
 	return usedDate;
+	
 }
 public void setUsedDate(Date usedDate) {
 	this.usedDate = usedDate;
