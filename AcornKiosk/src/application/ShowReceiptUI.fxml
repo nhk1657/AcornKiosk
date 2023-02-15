@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kang.menu789.Menu7">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
    <children>
       <ImageView fx:id="mtimageview" fitHeight="750.0" fitWidth="500.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@/kang/image/receipt.png" />         
+            <Image url="@/application/image/receipt.png" />          
             </image>
       </ImageView>
       <Label layoutX="292.0" layoutY="376.0" prefHeight="24.0" prefWidth="68.0">
@@ -68,5 +69,15 @@
             <Font size="20.0" />
          </font>
       </Label>
+          <Button onAction="#switchToScene0" layoutX="26.0" layoutY="673.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: 000000; -fx-border-color: #a3a7a9;" text="확인">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+     <Button onAction="#print" layoutX="193.0" layoutY="673.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: 000000; -fx-border-color: #a3a7a9;" text="출력" textFill="#01aaff">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
