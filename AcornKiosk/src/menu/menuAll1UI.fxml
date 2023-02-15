@@ -2,8 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -39,7 +37,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                      <children>
-                        <Button fx:id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu1Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
+                        <Button fx:id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu1Proc" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="에스프레소&#10;1500원" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="110.0" fitWidth="70.0">
                                  <image>
@@ -52,7 +50,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1">
                      <children>
-                        <Button fx:id="2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu2Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
+                        <Button fx:id="2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu2Proc" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="아메리카노&#10;1500원" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="110.0" fitWidth="70.0">
                                  <image>
@@ -65,7 +63,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="2">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu3Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu3Proc" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="카페라떼&#10;2000원" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="110.0" fitWidth="70.0">
                                  <image>
@@ -78,7 +76,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="1">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu4Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu4Proc" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="바닐라라떼&#10;2000원" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="110.0" fitWidth="70.0">
                                  <image>
@@ -91,7 +89,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu5Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu5Proc" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="카페모카&#10;2500원&#10;" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="110.0" fitWidth="70.0">
                                  <image>
@@ -104,7 +102,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu6Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu6Proc" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="카라멜라떼&#10;2500원" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="110.0" fitWidth="70.0">
                                  <image>
@@ -117,7 +115,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="2">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu7Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu7Proc" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="돌체라떼&#10;2500원" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="110.0" fitWidth="70.0">
                                  <image>
@@ -130,7 +128,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu8Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu8Proc" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="헤이즐넛라떼&#10;3500원" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="110.0" fitWidth="70.0">
                                  <image>
@@ -141,40 +139,17 @@
                         </Button>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                     <children>
-                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectMenu9Proc" prefHeight="160.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="에스프레소&#10;3000원" textAlignment="CENTER">
-                           <graphic>
-                              <ImageView fitHeight="110.0" fitWidth="70.0">
-                                 <image>
-                                    <Image url="@../menuImg/coffee/1.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
             </GridPane>
-            <HBox prefHeight="150.0" prefWidth="500.0" spacing="5.0" style="-fx-background-color: #FFFFFF;">
+            <HBox alignment="CENTER" prefHeight="150.0" prefWidth="500.0" spacing="60.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <ScrollPane id="orderlist" prefHeight="150.0" prefWidth="295.0">
-                    
-                  </ScrollPane>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
-                     <children>
-                        <Label alignment="CENTER" prefHeight="80.0" prefWidth="90.0" style="-fx-border-color: #01AAFF;" text="총 가격" />
-                        <Button mnemonicParsing="false" onAction="#cancelbtn" prefHeight="80.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff" />
-                     </children>
-                  </VBox>
-                  <Button mnemonicParsing="false" onAction="#cashbtn" prefHeight="190.0" prefWidth="80.0" style="-fx-background-color: #01AAFF;" text="결제" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#cancelbtn" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff" />
+                  <Button mnemonicParsing="false" onAction="#cashbtn" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: #01AAFF;" text="결제" textFill="WHITE" />
                </children>
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
-               <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </padding>
             </HBox>
          </children>
       </VBox>
