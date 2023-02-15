@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -19,7 +20,7 @@ import order.db.orderdataImpl;
 
 public class addOrderMain extends Application{
 	orderdata od;
-	
+	orderMenu om;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
@@ -36,7 +37,6 @@ public class addOrderMain extends Application{
 		Parent orderRoot = loader.load();
 		
 		//장바구니 db 가져오기
-		
 		ScrollPane sp = (ScrollPane)orderRoot.lookup("#orderList");
 		
 		TableView<orderMenu> orderTable = new TableView<>();
@@ -61,7 +61,6 @@ public class addOrderMain extends Application{
 		
 		List<orderMenu> orderList = od.selectMenu();
 		
-		
 		ObservableList <orderMenu> data =  FXCollections.observableArrayList(orderList);
 		
 		orderTable.setItems(data);
@@ -70,6 +69,17 @@ public class addOrderMain extends Application{
 		sp.setContent(orderTable);
 		sp.setPrefSize(400, 300);
 		sp.relocate(50, 175);
+		
+		//
+		
+		Label sum = (Label)orderRoot.lookup("#sum");
+		om = orderList.get(0);
+		om.getSum();
+		
+		String total = Integer.toString(om.getSum());
+		sum.setText(total +" 원");
+//		
+//		sum.setText(om.getSum());
 		
 		
 		Controller ctrl = loader.getController();
@@ -80,4 +90,6 @@ public class addOrderMain extends Application{
 		primaryStage.show();
 	}
 
+	
+	
 }
