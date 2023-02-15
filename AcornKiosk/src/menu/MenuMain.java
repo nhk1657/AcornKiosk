@@ -8,14 +8,15 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import menu.db.Orders;
 
 
-public class TestMain extends Application{
-	
+public class MenuMain extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
+		
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("/menu/menuAll1UI.fxml"));
 		
@@ -23,8 +24,8 @@ public class TestMain extends Application{
 		
 		
 		
-		TestController ctr = loader.getController();
-		ctr.setRoot(menuroot);
+		Controller ctr = loader.getController();
+		ctr.setmenu(menuroot);
 		
 		
 		primaryStage.setScene(new Scene(menuroot));

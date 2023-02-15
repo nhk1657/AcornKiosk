@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 public class SelectSectionImpl implements SelectSection{
 
 	Stage stage;
+	static int secnum=0;
 	
 	@Override
 	public void cofbtn(Parent root) {
@@ -29,12 +30,13 @@ public class SelectSectionImpl implements SelectSection{
 			e.printStackTrace();
 		}
 		
-		TestController ctrl = loader.getController();
-		ctrl.setcofbtn(cof);
+		Controller ctrl = loader.getController();
+		ctrl.setmenu(cof);
 		
 		Cofbtn.setScene(new Scene(cof));
 		Cofbtn.setTitle("주문목록");
 		Cofbtn.show();
+		secnum=0;
 	}
 
 	@Override
@@ -42,7 +44,7 @@ public class SelectSectionImpl implements SelectSection{
 		// TODO Auto-generated method stub
 		Parent smo=null;
 		
-		Stage Smobtn = new Stage();//(Stage) root.getScene().getWindow();
+		Stage Smobtn =(Stage) root.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu/menuAll2UI.fxml"));
 		
 		try {
@@ -51,21 +53,21 @@ public class SelectSectionImpl implements SelectSection{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		TestController ctr = loader.getController();
-		ctr.setsmobtn(smo);
+		Controller ctr = loader.getController();
+		ctr.setmenu(smo);
 		
 		
 		Smobtn.setScene(new Scene(smo));
 		Smobtn.setTitle("주문목록");
 		Smobtn.show();
-		
+		secnum=1;
 	}
 
 	@Override
 	public void adebtn(Parent root) {
 		// TODO Auto-generated method stub
 		Parent ade=null;
-		Stage Adebtn = new Stage();//(Stage) root.getScene().getWindow();
+		Stage Adebtn = (Stage) root.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu/menuAll3UI.fxml"));
 		
 		try {
@@ -74,20 +76,21 @@ public class SelectSectionImpl implements SelectSection{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		TestController ctr = loader.getController();
-		ctr.setadebtn(ade);
+		Controller ctr = loader.getController();
+		ctr.setmenu(ade);
 		
 		
 		Adebtn.setScene(new Scene(ade));
 		Adebtn.setTitle("주문목록");
 		Adebtn.show();
+		secnum=2;
 	}
 
 	@Override
 	public void teabtn(Parent root) {
 		// TODO Auto-generated method stub
 		Parent tea=null;
-		Stage Teabtn = new Stage();//(Stage) root.getScene().getWindow();
+		Stage Teabtn = (Stage) root.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu/menuAll4UI.fxml"));
 		
 		try {
@@ -96,13 +99,14 @@ public class SelectSectionImpl implements SelectSection{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		TestController ctr = loader.getController();
-		ctr.setteabtn(tea);
+		Controller ctr = loader.getController();
+		ctr.setmenu(tea);
 		
 		
 		Teabtn.setScene(new Scene(tea));
 		Teabtn.setTitle("주문목록");
 		Teabtn.show();
+		secnum=3;
 	}
 
 	

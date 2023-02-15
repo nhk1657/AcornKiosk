@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import member.service.Member;
+import order.db.orderMenu;
 
 
 
@@ -63,21 +64,8 @@ public class MenuTestImpl implements MenuTest{
 		return menuList;
 	}
 	
-	@Override
-	public boolean input1(Orders o) throws Exception {
-		String sql = "INSERT INTO orders (Orderlines, ID, Name, Price) VALUES(?, ?, ?,?)";
-		pstmt = con.prepareStatement(sql);
-		pstmt.setInt(1, ordercnt);
-		pstmt.setInt(2, o.getId());
-		pstmt.setString(3, o.getName());
-		pstmt.setInt(4, o.getPrice());
-		
-		ordercnt++;
-		int result = pstmt.executeUpdate();
-		
-		return false;
-	}
 	
+	@Override
 	public String menuName(int menuid) {
 		String sql = "SELECT menuName FROM menu where menuID = ?";
 		String name = null;
@@ -158,5 +146,58 @@ public class MenuTestImpl implements MenuTest{
 		return price;
 	}
 
+	@Override
+	public boolean input(Orders od) {
+		// TODO Auto-generated method stub
+		String sql = "INSERT INTO orders VALUES(?,?,?,?)";
+		int result=0;
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, od.getMenuid());
+			pstmt.setString(2, od.getMenuname());
+			pstmt.setInt(3, od.getMenuprice());
+			pstmt.setInt(4, od.getMenusell());
+			result = pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		if(result>0) {
+			System.out.println("success");
+		}else {
+			System.out.println("err");
+		}
+		
+		return false;
+	}
+	
+	@Override
+	public List<Orders> menuoutput() {
+	
+	// TODO Auto-generated method stub
+	String sql = "select * from orders";
+	List<Orders> orders = new ArrayList<>();
+    
+	try {
+		pstmt = con.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		
+		while(rs.next()) {		
+			Orders ods = new Orders();
+			
+			ods.setMenuid(rs.getInt(1));
+			ods.setMenuname(rs.getString(2));
+			ods.setMenuprice(rs.getInt(3));
+			ods.setMenusell(rs.getInt(4));
+			System.out.println(ods.getMenuid() + " " + ods.getMenuname() +" "+ ods.getMenuprice() +" " +ods.getMenusell());
+
+			orders.add(ods);			
+		}
+	}catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
+	} 
+		return orders;
+	}
 	
 }

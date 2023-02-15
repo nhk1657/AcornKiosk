@@ -8,12 +8,12 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import member.dao.DatabaseServiceImpl;
 import admin.AdminMain;
-import menu.TestMain;
+import menu.MenuMain;
 
 public class LoginServiceImpl implements LoginService {
 	DatabaseServiceImpl ds = new DatabaseServiceImpl();
 	AdminMain am = new AdminMain();
-	TestMain tm = new TestMain();
+	MenuMain tm = new MenuMain();
 		
 		// 로그인
 		public void loginProc(Parent loginRoot) throws Exception {

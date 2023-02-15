@@ -1,47 +1,37 @@
 package menu.db;
 
+
+
 public class Orders {
-	int orderlines;	
-	int id;
-	String name;
-	int price;
-	int sell;
-	int sum;
-	
-	public int getOrderlines() {
-		return orderlines;
+	int menuid;
+	String menuname;
+	//주문가격 + 유료/무료옵션 가격도 추가
+	int menuprice;
+	//판매갯수
+	int menusell;
+	public int getMenuid() {
+		return menuid;
 	}
-	public void setOrderlines(int orderlines) {
-		this.orderlines = orderlines;
+	public void setMenuid(int menuid) {
+		this.menuid = menuid;
 	}
-	public int getId() {
-		return id;
+	public String getMenuname() {
+		return menuname;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setMenuname(String menuname) {
+		this.menuname = menuname;
 	}
-	public String getName() {
-		return name;
+	public int getMenuprice() {
+		return menuprice;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setMenuprice(int menuprice) {
+		this.menuprice = menuprice;
 	}
-	public int getPrice() {
-		return price;
+	public int getMenusell() {
+		return menusell;
 	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	public int getSell() {
-		return sell;
-	}
-	public void setSell(int sell) {
-		this.sell = sell;
-	}
-	public int getSum() {
-		return sum;
-	}
-	public void setSum(int sum) {
-		this.sum = sum;
+	public void setMenusell(int menusell) {
+		this.menusell = menusell;
 	}
 }
+
