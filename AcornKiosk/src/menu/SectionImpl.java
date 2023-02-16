@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import menu.db.MenuDB;
 import menu.db.MenuData;
@@ -43,7 +44,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);
@@ -70,7 +72,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);
@@ -94,7 +97,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);
@@ -120,7 +124,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);
@@ -146,7 +151,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);
@@ -172,7 +178,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);
@@ -198,7 +205,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);
@@ -224,7 +232,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);
@@ -250,7 +259,8 @@ public class SectionImpl implements Section{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		Label lbl = (Label) selectpop.lookup("#drinkname");
+		lbl.setText(menu_name);
 		Controller ctrl = loader.getController();
 		
 		ctrl.setSectionUI(selectpop);

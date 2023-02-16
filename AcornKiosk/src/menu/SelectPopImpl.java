@@ -93,30 +93,69 @@ public class SelectPopImpl implements SelectPop{
 	@Override
 	public void sizesmall(Parent pop) {
 		// TODO Auto-generated method stub
+		Button btn1 =(Button) pop.lookup("#smallbtn");
+		btn1.setStyle("-fx-background-color: #01AAFF");
+		btn1.setTextFill(Color.valueOf("#FFFFFF"));
+		Button btn2 =(Button) pop.lookup("#middlebtn");
+		btn2.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn2.setTextFill(Color.valueOf("#01AAFF"));
+		Button btn3 =(Button) pop.lookup("#largebtn");
+		btn3.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn3.setTextFill(Color.valueOf("#01AAFF"));
 		size=0;
 	}
 
 	@Override
 	public void sizemid(Parent pop) {
 		// TODO Auto-generated method stub
+		Button btn1 =(Button) pop.lookup("#smallbtn");
+		btn1.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn1.setTextFill(Color.valueOf("#01AAFF"));
+		Button btn2 =(Button) pop.lookup("#middlebtn");
+		btn2.setStyle("-fx-background-color: #01AAFF");
+		btn2.setTextFill(Color.valueOf("#FFFFFF"));
+		Button btn3 =(Button) pop.lookup("#largebtn");
+		btn3.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn3.setTextFill(Color.valueOf("#01AAFF"));
 		size=500;
 	}
 
 	@Override
 	public void sizelarge(Parent pop) {
 		// TODO Auto-generated method stub
+		Button btn1 =(Button) pop.lookup("#smallbtn");
+		btn1.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn1.setTextFill(Color.valueOf("#01AAFF"));
+		Button btn2 =(Button) pop.lookup("#middlebtn");
+		btn2.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn2.setTextFill(Color.valueOf("#01AAFF"));
+		Button btn3 =(Button) pop.lookup("#largebtn");
+		btn3.setStyle("-fx-background-color: #01AAFF");
+		btn3.setTextFill(Color.valueOf("#FFFFFF"));
 		size=1000;
 	}
 
 	@Override
 	public void sugarsmall(Parent pop) {
 		// TODO Auto-generated method stub
+		Button btn1 =(Button) pop.lookup("#sugarsmallbtn");
+		btn1.setStyle("-fx-background-color: #01AAFF");
+		btn1.setTextFill(Color.valueOf("#FFFFFF"));
+		Button btn2 =(Button) pop.lookup("#sugarlargebtn");
+		btn2.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn2.setTextFill(Color.valueOf("#01AAFF"));
 		sugar=0;
 	}
 
 	@Override
 	public void sugarlarge(Parent pop) {
 		// TODO Auto-generated method stub
+		Button btn1 =(Button) pop.lookup("#sugarsmallbtn");
+		btn1.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn1.setTextFill(Color.valueOf("#01AAFF"));
+		Button btn2 =(Button) pop.lookup("#sugarlargebtn");
+		btn2.setStyle("-fx-background-color: #01AAFF");
+		btn2.setTextFill(Color.valueOf("#FFFFFF"));
 		sugar=500;
 	}
 

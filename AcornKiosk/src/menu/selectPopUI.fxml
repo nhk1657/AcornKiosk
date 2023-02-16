@@ -15,7 +15,7 @@
          <children>
             <HBox alignment="CENTER" layoutX="118.0" layoutY="41.0" prefHeight="80.0" prefWidth="230.0">
                <children>
-                  <Label text="음료명">
+                  <Label fx:id="drinkname" text="음료명">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -46,7 +46,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" fx:id="hotbtn" onAction="#hot" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="HOT" textFill="#01aaff">
+                  <Button mnemonicParsing="false" fx:id="hotbtn" onAction="#hot" prefWidth="65.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="HOT" textFill="#FFFFFF">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -68,17 +68,17 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#sizesmall" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="S" textFill="#01aaff">
+                  <Button mnemonicParsing="false" fx:id="smallbtn" onAction="#sizesmall" prefWidth="65.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="S" textFill="#FFFFFF">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#sizemid" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="M" textFill="#01aaff">
+                  <Button mnemonicParsing="false" fx:id="middlebtn" onAction="#sizemid" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="M" textFill="#01aaff">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#sizelarge" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="L" textFill="#01aaff">
+                  <Button mnemonicParsing="false" fx:id="largebtn" onAction="#sizelarge" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="L" textFill="#01aaff">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -112,12 +112,12 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#sugarsmall" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="연함" textFill="#01aaff">
+                  <Button mnemonicParsing="false" fx:id="sugarsmallbtn" onAction="#sugarsmall" prefWidth="65.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="연함" textFill="#FFFFFF">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#sugarlarge" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="진함" textFill="#01aaff">
+                  <Button mnemonicParsing="false" fx:id="sugarlargebtn" onAction="#sugarlarge" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="진함" textFill="#01aaff">
                      <font>
                         <Font size="15.0" />
                      </font>
