@@ -7,11 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" 
-style="-fx-background-color: 000000;" 
-xmlns="http://javafx.com/javafx/19" 
-xmlns:fx="http://javafx.com/fxml/1" 
-fx:controller="payment.SceneController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="payment.SceneController">
    <children>
       <ImageView fitHeight="750.0" fitWidth="454.0" layoutX="45.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,20 +24,18 @@ fx:controller="payment.SceneController">
             <Font size="15.0" />
          </font>
       </Label>
-      <Button onAction="#switchToScene6" layoutX="105.0" layoutY="466.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: 000000; -fx-border-color: #1b0066;" text="영수증 인쇄" textFill="#1b0066">
+      <Button layoutX="105.0" layoutY="466.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: 000000; -fx-border-color: #1b0066;" text="영수증 확인" textFill="#1b0066">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="96.0" layoutY="255.0" prefHeight="40.0" prefWidth="306.0" text="#주문번호 입력란" textFill="#1b0066">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
-      <Button onAction="#switchToScene0" layoutX="105.0" layoutY="580.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #1b0066; -fx-border-color: #1b0066;" text="처음으로" textFill="WHITE">
+      <Button layoutX="105.0" layoutY="580.0" mnemonicParsing="false" onAction="#switchToScene0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #1b0066; -fx-border-color: #1b0066;" text="처음으로" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
    </children>
 </Pane>
+
+
+<!-- ㅗ허ㅗㅎ -->

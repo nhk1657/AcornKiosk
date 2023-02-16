@@ -12,8 +12,14 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("InputCoupUI.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("CardCashingUI.fxml"));
+<<<<<<< HEAD
+			Scene scene = new Scene(root,500,700);
+
+
+=======
 			Scene scene = new Scene(root,500,750);
+>>>>>>> branch 'master' of https://github.com/nhk1657/AcornKiosk.git
 			
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -28,3 +34,4 @@ public class Main extends Application {
 	
 	
 }
+
