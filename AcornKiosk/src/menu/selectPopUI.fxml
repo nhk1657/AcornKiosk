@@ -26,7 +26,7 @@
                <children>
                   <Label alignment="CENTER" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #01AAFF;" text="주문량" textFill="WHITE">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <TextField fx:id="counts" alignment="CENTER" prefHeight="40.0" prefWidth="90.0" promptText="갯수">
@@ -39,87 +39,87 @@
                   <Insets left="20.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="208.0" prefHeight="70.0" prefWidth="400.0" spacing="30.0">
+            <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="208.0" prefHeight="70.0" prefWidth="450.0" spacing="26.0">
                <children>
-                  <Label prefWidth="50.0" text="온도">
+                  <Label prefWidth="60.0" text="온도">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" fx:id="hotbtn" onAction="#hot" prefWidth="65.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="HOT" textFill="#FFFFFF">
+                  <Button fx:id="hotbtn" mnemonicParsing="false" onAction="#hot" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="HOT" textFill="#FFFFFF">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button  mnemonicParsing="false" fx:id="coldbtn" onAction="#cold" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="COLD" textFill="#01aaff">
+                  <Button fx:id="coldbtn" mnemonicParsing="false" onAction="#cold" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="COLD" textFill="#01aaff">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="19.0" />
                      </font>
                   </Button>
                </children>
                <padding>
-                  <Insets left="20.0" />
+                  <Insets left="24.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="278.0" prefHeight="70.0" prefWidth="400.0" spacing="30.0">
+            <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="278.0" prefHeight="70.0" prefWidth="450.0" spacing="26.0">
                <children>
-                  <Label prefWidth="50.0" text="사이즈">
+                  <Label prefWidth="60.0" text="사이즈">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" fx:id="smallbtn" onAction="#sizesmall" prefWidth="65.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="S" textFill="#FFFFFF">
+                  <Button fx:id="smallbtn" mnemonicParsing="false" onAction="#sizesmall" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="S" textFill="#FFFFFF">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" fx:id="middlebtn" onAction="#sizemid" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="M" textFill="#01aaff">
+                  <Button fx:id="middlebtn" mnemonicParsing="false" onAction="#sizemid" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="M" textFill="#01aaff">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" fx:id="largebtn" onAction="#sizelarge" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="L" textFill="#01aaff">
+                  <Button fx:id="largebtn" mnemonicParsing="false" onAction="#sizelarge" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="L" textFill="#01aaff">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="19.0" />
                      </font>
                   </Button>
                </children>
                <padding>
-                  <Insets left="20.0" />
+                  <Insets left="24.0" />
                </padding>
             </HBox>
             <HBox alignment="CENTER" layoutX="25.0" layoutY="501.0" prefHeight="100.0" prefWidth="400.0" spacing="150.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#popClose" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#popClose" prefHeight="70.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#popChoice" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: #01AAFF;" text="선택" textFill="WHITE">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#popChoice" prefHeight="70.0" prefWidth="110.0" style="-fx-background-color: #01AAFF;" text="선택" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="348.0" prefHeight="70.0" prefWidth="401.0" spacing="30.0">
+            <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="348.0" prefHeight="70.0" prefWidth="450.0" spacing="26.0">
                <padding>
-                  <Insets left="20.0" />
+                  <Insets left="24.0" />
                </padding>
                <children>
-                  <Label prefWidth="50.0" text="당도">
+                  <Label prefWidth="60.0" text="당도">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" fx:id="sugarsmallbtn" onAction="#sugarsmall" prefWidth="65.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="연함" textFill="#FFFFFF">
+                  <Button fx:id="sugarsmallbtn" mnemonicParsing="false" onAction="#sugarsmall" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #01AAFF; -fx-border-color: #01AAFF;" text="연함" textFill="#FFFFFF">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" fx:id="sugarlargebtn" onAction="#sugarlarge" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="진함" textFill="#01aaff">
+                  <Button fx:id="sugarlargebtn" mnemonicParsing="false" onAction="#sugarlarge" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="진함" textFill="#01aaff">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="19.0" />
                      </font>
                   </Button>
                </children>

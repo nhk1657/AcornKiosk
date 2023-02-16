@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.Controller">
    <children>
@@ -17,10 +18,22 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="selcof" mnemonicParsing="false" onAction="#cofbtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #01aaff; -fx-border-color: #01AAFF;" text="커피" textFill="WHITE" />
-                  <Button fx:id="selsmoo" mnemonicParsing="false" onAction="#smobtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="스무디" textFill="#01aaff" />
-                  <Button fx:id="selade" mnemonicParsing="false" onAction="#adebtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="에이드" textFill="#01aaff" />
-                  <Button fx:id="seltea" mnemonicParsing="false" onAction="#teabtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="차" textFill="#01aaff" />
+                  <Button fx:id="selcof" mnemonicParsing="false" onAction="#cofbtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #01aaff; -fx-border-color: #01AAFF;" text="커피" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="selsmoo" mnemonicParsing="false" onAction="#smobtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="스무디" textFill="#01aaff">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="selade" mnemonicParsing="false" onAction="#adebtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="에이드" textFill="#01aaff">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="seltea" mnemonicParsing="false" onAction="#teabtn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="차" textFill="#01aaff">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
                </children>
             </HBox>
             <GridPane alignment="CENTER" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;">
@@ -144,8 +157,14 @@
             </GridPane>
             <HBox alignment="CENTER" prefHeight="150.0" prefWidth="500.0" spacing="60.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button mnemonicParsing="false" onAction="#cancelbtn" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff" />
-                  <Button mnemonicParsing="false" onAction="#cashbtn" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: #01AAFF;" text="결제" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#cancelbtn" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="취소" textFill="#01aaff">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#cashbtn" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: #01AAFF;" text="결제" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
                </children>
                <opaqueInsets>
                   <Insets />
