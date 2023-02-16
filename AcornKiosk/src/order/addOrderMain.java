@@ -89,6 +89,11 @@ public class addOrderMain extends Application{
 		String total = Integer.toString(om.getSum());
 		sum.setText(total +" 원");
 		
+		
+		
+		
+		
+		
 		}
 		
 		

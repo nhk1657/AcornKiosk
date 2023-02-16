@@ -30,7 +30,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="151.0" layoutY="538.0" prefHeight="21.0" prefWidth="246.0" text="00000원" textAlignment="CENTER" textFill="RED">
+      <Label fx:id = "mm" alignment="CENTER_RIGHT" layoutX="151.0" layoutY="538.0" prefHeight="21.0" prefWidth="246.0" text="00000원" textAlignment="CENTER" textFill="RED">
          <font>
             <Font size="20.0" />
          </font>
@@ -40,7 +40,7 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <ScrollPane layoutX="133.0" layoutY="123.0" prefHeight="159.0" prefWidth="269.0" style="-fx-background-color: transparent;" />
+      <ScrollPane fx:id = "orderList" layoutX="133.0" layoutY="123.0" prefHeight="159.0" prefWidth="269.0" style="-fx-background-color: transparent;" />
    </children>
 </Pane>
 <!-- ㅗ허ㅗㅎ -->
