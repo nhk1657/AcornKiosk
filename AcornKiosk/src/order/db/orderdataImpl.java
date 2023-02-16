@@ -31,6 +31,24 @@ public class orderdataImpl implements orderdata{
 			e.printStackTrace();
 		}
 	}
+
+	
+	// 메뉴 데이터베이스에 구매한 수량만큼 추가
+	@Override
+	public void saveOrder(int menuId, int orderAcc) throws Exception {
+		String sql = "UPDATE menu SET menuSell = ? WHERE menuId = ?";
+
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, orderAcc);
+			pstmt.setInt(2, menuId);
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
 	@Override
 	public List<orderMenu> selectMenu() {
 
@@ -63,6 +81,8 @@ public class orderdataImpl implements orderdata{
 				//System.out.println("After="+om.getSum());
 				System.out.println(om.getMenuid() + " " + om.getMenuname() +" "+ om.getMenuprice() +" " +om.getMenusell()+ " "+ om.getSale()+ " "+ om.getSum());
 
+
+				saveOrder(om.getMenuid(), om.getMenusell());
 				orderList.add(om);
 
 			}
