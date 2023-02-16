@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: #011638;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: #011638;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.Controller">
    <children>
       <VBox alignment="CENTER" layoutX="-1.0" layoutY="175.0" prefHeight="400.0" prefWidth="500.0" spacing="20.0">
          <children>
@@ -21,11 +21,6 @@
                </font>
             </Button>
             <Button mnemonicParsing="false" onAction="#memberManage" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="회원 관리" textAlignment="CENTER">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#couponManage" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="쿠폰 관리" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
