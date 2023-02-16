@@ -1,4 +1,4 @@
-package member.service;
+package member;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ public class LoginMain extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(
-				getClass().getResource("../loginUI.fxml"));
+				getClass().getResource("loginUI.fxml"));
 		
 		Parent loginRoot = loader.load();
 	

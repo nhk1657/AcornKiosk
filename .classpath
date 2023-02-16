@@ -6,6 +6,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="AcornKiosk/src"/>
-	<classpathentry kind="lib" path="C:/Users/dhdhg/Documents/dahee/ojdbc6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

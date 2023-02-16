@@ -1,12 +1,15 @@
-package member.service;
+package member;
 
 import javafx.scene.Parent;
+import member.service.LoginService;
+import member.service.LoginServiceImpl;
+import member.service.MemberService;
+import member.service.MemberServiceImpl;
 
 public class Controller {
 	private Parent loginRoot;
-	private Parent registerRoot;
-	private LoginServiceImpl ls;
-	private MemberServiceImpl ms;
+	private LoginService ls;
+	private MemberService ms;
 
 	public Controller() {
 		ls = new LoginServiceImpl();
@@ -16,11 +19,6 @@ public class Controller {
 	public void setRoot(Parent loginRoot) {
 		this.loginRoot = loginRoot;
 	}
-
-	public void setMember(Parent registerRoot) {
-		this.registerRoot = registerRoot;
-	}
-
 	public void loginProc() throws Exception {
 		ls.loginProc(loginRoot);
 	}

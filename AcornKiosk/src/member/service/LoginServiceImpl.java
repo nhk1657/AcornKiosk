@@ -6,14 +6,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import member.Controller;
+import member.dao.DatabaseService;
 import member.dao.DatabaseServiceImpl;
 import admin.AdminMain;
 import menu.MenuMain;
 
 public class LoginServiceImpl implements LoginService {
-	DatabaseServiceImpl ds = new DatabaseServiceImpl();
-	AdminMain am = new AdminMain();
-	MenuMain tm = new MenuMain();
+	private DatabaseService ds = new DatabaseServiceImpl();
+	private AdminMain am = new AdminMain();
+	private MenuMain tm = new MenuMain();
 		
 		// 로그인
 		public void loginProc(Parent loginRoot) throws Exception {
@@ -23,10 +25,7 @@ public class LoginServiceImpl implements LoginService {
 			// 아이디 / 패스워드 값 가져오기
 			 TextField id = (TextField) loginRoot.lookup("#txtId");
 			 PasswordField pw = (PasswordField) loginRoot.lookup("#txtPw");
-			
-//			System.out.println("아이디 : " + id.getText());
-//			System.out.println("암호 : " + pw.getText());
-			
+			 
 			switch(ds.login(id.getText(), pw.getText())) {
 			// 아이디 존재하지 않는 경우
 			case 0:
@@ -55,32 +54,11 @@ public class LoginServiceImpl implements LoginService {
 			}
 		}
 	
-	public void registerProc(Parent loginRoot) {
-//		Stage registerForm = new Stage();	
-//		
-//		FXMLLoader loader = new FXMLLoader(
-//				getClass().getResource("../registerUI.fxml"));
-//		
-//		Parent registerRoot = null;
-//		try {
-//			registerRoot = loader.load();
-//			registerForm.setScene(new Scene(registerRoot));
-//		} catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//		
-//		Controller ctrl = loader.getController();
-//		ctrl.setMember(registerRoot);
-		
+	public void registerProc(Parent loginRoot) {		
 		Stage registerForm = (Stage) loginRoot.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("../registerUI.fxml"));
 		
-//		try {
-//			registerForm.setScene(new Scene(loader.load()));
-//		} catch(Exception e) {
-//			e.printStackTrace();
-//		}
 		try {
 			loginRoot = loader.load();
 			registerForm.setScene(new Scene(loginRoot));

@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import member.service.Member;
+import member.Member;
 import order.db.orderMenu;
 
 

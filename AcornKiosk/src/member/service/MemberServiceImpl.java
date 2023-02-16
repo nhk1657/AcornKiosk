@@ -8,12 +8,15 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import member.LoginMain;
+import member.Member;
+import member.dao.DatabaseService;
 import member.dao.DatabaseServiceImpl;
 
 public class MemberServiceImpl implements MemberService {
-	CommonServiceImpl cs;
-	DatabaseServiceImpl ds;
-	LoginMain lm;
+	private CommonService cs;
+	private DatabaseService ds;
+	private LoginMain lm;
 	
 	public MemberServiceImpl() {
 		cs = new CommonServiceImpl();
@@ -21,7 +24,7 @@ public class MemberServiceImpl implements MemberService {
 		lm = new LoginMain();
 	}
 	
-	public void joinProc(Parent registerRoot) throws Exception {
+	public void joinProc(Parent loginRoot) throws Exception {
 		Member m = new Member();
 		
 		// 아이디, 이름, 비밀번호 필드 가져오기
@@ -32,14 +35,14 @@ public class MemberServiceImpl implements MemberService {
 		
 		for(int i=0; i<txtFldName.length; i++) {
 			if(i < 2) {
-				txtFld[i] = (TextField) registerRoot.lookup(txtFldName[i]);
+				txtFld[i] = (TextField) loginRoot.lookup(txtFldName[i]);
 				if(txtFld[i].getText().isEmpty()) {
 					cs.errorMsg("경고", "회원 가입 오류", columnName[i] + " 필드가 비어 있습니다.");
 					txtFld[i].requestFocus();
 					return;
 				}
 			} else if(i<4) {
-				pwFld[i-2] = (PasswordField) registerRoot.lookup(txtFldName[i]);
+				pwFld[i-2] = (PasswordField) loginRoot.lookup(txtFldName[i]);
 				if(pwFld[i-2].getText().isEmpty()) {
 					cs.errorMsg("경고", "회원 가입 오류", columnName[i] + " 필드가 비어 있습니다.");
 					pwFld[i-2].requestFocus();
@@ -58,12 +61,12 @@ public class MemberServiceImpl implements MemberService {
 		}
 
 		// DatePicker의 값을 sql에 저장하기 위해 변환하는 과정
-		DatePicker datePicker = (DatePicker) registerRoot.lookup("#dateBirth");
+		DatePicker datePicker = (DatePicker) loginRoot.lookup("#dateBirth");
 		Date date = Date.from(datePicker.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
 		java.sql.Date sqlDate = new java.sql.Date(date.getTime());
 		
 		// 이메일 값 가져오기
-		TextField emailFld = (TextField) registerRoot.lookup("#txtEmail");
+		TextField emailFld = (TextField) loginRoot.lookup("#txtEmail");
 
 		m.setName(txtFld[1].getText());
 		m.setId(txtFld[0].getText());
@@ -87,7 +90,7 @@ public class MemberServiceImpl implements MemberService {
 			
 		} else {
 			ds.insert(m);
-			Stage primaryStage = (Stage) registerRoot.getScene().getWindow();
+			Stage primaryStage = (Stage) loginRoot.getScene().getWindow();
 			lm.start(primaryStage);
 		}
 	}

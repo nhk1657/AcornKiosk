@@ -1,4 +1,4 @@
-package member.service;
+package member;
 
 import java.util.Date;
 

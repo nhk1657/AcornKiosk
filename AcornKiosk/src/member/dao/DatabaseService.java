@@ -1,6 +1,6 @@
 package member.dao;
 
-import member.service.Member;
+import member.Member;
 
 public interface DatabaseService {
 	public int login(String id, String pw) throws Exception;

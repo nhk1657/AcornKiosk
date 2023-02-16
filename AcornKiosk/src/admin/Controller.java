@@ -13,7 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import member.service.LoginMain;
+import member.LoginMain;
 
 public class Controller {
 	private Parent adminmenu;

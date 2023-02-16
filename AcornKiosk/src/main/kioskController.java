@@ -3,7 +3,7 @@ package main;
 
 import javafx.scene.Parent;
 import javafx.stage.Stage;
-import member.service.LoginMain;
+import member.LoginMain;
 
 public class kioskController {
 	private Parent kioskMainRoot;

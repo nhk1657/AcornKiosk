@@ -6,15 +6,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import member.Member;
+import member.service.CommonService;
 import member.service.CommonServiceImpl;
-import member.service.Member;
 
 public class DatabaseServiceImpl implements DatabaseService {
-	Connection con;
-	ResultSet rs;
-	PreparedStatement pstmt;
+	private Connection con;
+	private ResultSet rs;
+	private PreparedStatement pstmt;
 	
-	CommonServiceImpl cs;
+	private CommonService cs;
 	
 	// 데이터베이스 연결
 	public DatabaseServiceImpl() {

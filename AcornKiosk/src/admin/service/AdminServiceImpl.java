@@ -26,7 +26,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import member.service.LoginMain;
+import member.LoginMain;
 
 public class AdminServiceImpl implements AdminService{
 	private Parent adminMenuManage = null;
