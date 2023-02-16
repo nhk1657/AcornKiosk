@@ -26,6 +26,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import main.kioskMain;
 import member.LoginMain;
 
 public class AdminServiceImpl implements AdminService{
@@ -354,9 +355,9 @@ public class AdminServiceImpl implements AdminService{
 	public void endAdmin(Parent adminmenu) {
 		// TODO Auto-generated method stub
 		Stage back = (Stage) adminmenu.getScene().getWindow();
-		LoginMain lm= new LoginMain();
+		kioskMain km= new kioskMain();
 		try {
-			lm.start(back);
+			km.start(back);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -38,6 +38,6 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="400" layoutY="650" mnemonicParsing="false" onAction="#adminback" prefHeight="40" prefWidth="40" text="&lt;" />
+      <Button layoutX="267.0" layoutY="650" mnemonicParsing="false" onAction="#adminback" prefHeight="40" prefWidth="173.0" text="메인으로 돌아가기" />
    </children>
 </Pane>
