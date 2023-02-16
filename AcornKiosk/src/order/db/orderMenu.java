@@ -17,8 +17,8 @@ public class orderMenu {
 		//누적값을 더하기 위해서 한번 초기화를 해줘야함/		
 		this.sum=0;
 	}
-	public void setSum() {
-		this.sum += Sale;
+	public void setSum(int sum) {
+		this.sum = sum;
 	}
 
 
@@ -26,7 +26,7 @@ public class orderMenu {
 		return Sale;
 	}
 	public void setSale() {
-		setSum();
+		//setSum();
 		this.Sale = ( menuprice * menusell);
 		// setSum메서드 호출 -> 누적 합계 가능해짐
 		//setSum();

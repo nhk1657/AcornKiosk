@@ -57,9 +57,9 @@ public class orderdataImpl implements orderdata{
 				om.setMenusell(rs.getInt(4));
 
 				om.setSale();
-				//sum+=om.getSale();
+				sum+=om.getSale();
 				//System.out.println("Before="+om.getSum());
-				om.setSum();
+				om.setSum(sum);
 				//System.out.println("After="+om.getSum());
 				System.out.println(om.getMenuid() + " " + om.getMenuname() +" "+ om.getMenuprice() +" " +om.getMenusell()+ " "+ om.getSale()+ " "+ om.getSum());
 
@@ -75,12 +75,7 @@ public class orderdataImpl implements orderdata{
 
 	}
 
-	//	public void delOrder() throws SQLException {
-	//		// TODO Auto-generated method stub
-	//		String sql="delect  from  orderMenu";
-	//		pstmt = con.prepareStatement(sql);
-	//		
-	//	}
+	
 
 	
 	
@@ -101,13 +96,7 @@ public class orderdataImpl implements orderdata{
 			//pstmt = con.prepareStatement(sql2);
 			
 			
-//변수값을 0으로 보내도 안됨
-//			om.setMenuid(0);
-//			om.setMenuname(null);
-//			om.setMenuprice(0);
-//			om.setMenusell(0);
-//			om.setSale();
-//			om.setSum();
+
 			
 			// 이걸 안해서 삭제가 안됐네요 
 			int result = pstmt.executeUpdate();

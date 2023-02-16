@@ -79,15 +79,17 @@ public class addOrderMain extends Application{
 		
 		
 		//라벨 값 안에 총액 출력
-		//if(orderList.size() != 0) {
+		if(orderList.size() != 0) {
 		Label sum = (Label)orderRoot.lookup("#sum");
-		om = orderList.get(0);
+		//order
+		om = orderList.get(orderList.size()- 1);
+		//om = orderList.get();
 		om.getSum();
 		
 		String total = Integer.toString(om.getSum());
 		sum.setText(total +" 원");
 		
-		//}
+		}
 		
 		
 		Controller ctrl = loader.getController();
