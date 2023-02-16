@@ -31,12 +31,18 @@ public class addOrderMain extends Application{
 		// TODO Auto-generated method stub
 		od = new orderdataImpl();
 		
+		
+		
+		//문제1 db값이 중복적으로 보여지기 시작함
+		//여러메뉴를 담아도 마지막 메뉴값이 중복됨
+		//console창에서는 잘 뜸
+		
 		FXMLLoader loader = new FXMLLoader(
 				getClass().getResource("addOrderUI.fxml"));
 		
 		Parent orderRoot = loader.load();
 		
-		//장바구니 db 가져오기
+		//장바구니 db 가져와서 보여줌
 		ScrollPane sp = (ScrollPane)orderRoot.lookup("#orderList");
 		
 		TableView<orderMenu> orderTable = new TableView<>();
@@ -61,6 +67,7 @@ public class addOrderMain extends Application{
 		
 		List<orderMenu> orderList = od.selectMenu();
 		
+		
 		ObservableList <orderMenu> data =  FXCollections.observableArrayList(orderList);
 		
 		orderTable.setItems(data);
@@ -70,16 +77,17 @@ public class addOrderMain extends Application{
 		sp.setPrefSize(400, 300);
 		sp.relocate(50, 175);
 		
-		//
 		
+		//라벨 값 안에 총액 출력
+		//if(orderList.size() != 0) {
 		Label sum = (Label)orderRoot.lookup("#sum");
 		om = orderList.get(0);
 		om.getSum();
 		
 		String total = Integer.toString(om.getSum());
 		sum.setText(total +" 원");
-//		
-//		sum.setText(om.getSum());
+		
+		//}
 		
 		
 		Controller ctrl = loader.getController();

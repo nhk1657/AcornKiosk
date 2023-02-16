@@ -1,12 +1,12 @@
 package order.service;
 
 import javafx.fxml.FXMLLoader;
-
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.kioskMain;
 import order.Controller;
+import order.addOrderMain;
 import order.db.orderMenu;
 import order.db.orderdata;
 import order.db.orderdataImpl;
@@ -14,7 +14,7 @@ import order.db.orderdataImpl;
 public class addOrderServiceImpl implements addOrderService{
 	orderdata od;
 	orderMenu om;
-	
+	addOrderMain aom;
 	
 	@Override
 	public void payProc(Parent orderRoot) {
@@ -60,9 +60,9 @@ public class addOrderServiceImpl implements addOrderService{
 		
 		
 		try {
-		   
+		    od.deleteOrder();
 			km.start(orderCancel);
-			
+			//od.selectMenu().clear();
 			
 		}catch(Exception e) {
 			e.printStackTrace();

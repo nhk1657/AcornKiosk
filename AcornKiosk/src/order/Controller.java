@@ -35,16 +35,19 @@ public void setPayMehtod(Parent orderPay ) {
 	this.orderPay = orderPay;
 }
 
+//주문 취소 버튼을 눌렀을 때 메인으로 화면 전환하기 위한 Parent 값 설정
 public void setorderCancel(Parent orderCancel) {
 	this.orderCancel =orderCancel;
 }
 public void payProc() {
 	as.payProc(orderRoot);
 }
+
+
+//주문 취소 버튼 
 public void cancelProc() {
-	
-	as.cancelProc(orderRoot);
 	od.deleteOrder();
+	as.cancelProc(orderRoot);
 	
 }
 
