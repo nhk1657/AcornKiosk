@@ -10,7 +10,7 @@
    <children>
       <VBox alignment="CENTER" layoutX="-1.0" layoutY="175.0" prefHeight="400.0" prefWidth="500.0" spacing="20.0">
          <children>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#menuManage" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="메뉴 설정" textAlignment="CENTER">
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#menuManage" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #F8FAFF;" text="메뉴 관리" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>

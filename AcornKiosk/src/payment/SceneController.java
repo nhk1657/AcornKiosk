@@ -16,6 +16,7 @@ import javafx.scene.control.ButtonType;
 
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import main.kioskMain;
 
 public class SceneController {
 	Stage stage;
@@ -29,12 +30,29 @@ public class SceneController {
 	private Pane ScenePane;
 
 	public void switchToScene0(ActionEvent event) throws IOException, InterruptedException {
+<<<<<<< HEAD
 		Parent root = FXMLLoader.load(getClass().getResource("../main/kioskMain.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 
+=======
+		//Parent root = FXMLLoader.load(getClass().getResource("../main/kioskMain.fxml"));
+		//stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		//scene = new Scene(root);
+		//stage.setScene(scene);
+		//stage.show();
+		//Thread.sleep(500);
+		Stage returnmain=(Stage)((Node)event.getSource()).getScene().getWindow();
+		kioskMain km =new kioskMain();
+		try {
+			km.start(returnmain);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+>>>>>>> branch 'master' of https://github.com/nhk1657/AcornKiosk.git
 	}
 
 	public void switchToScene1(ActionEvent event) throws IOException, InterruptedException {
