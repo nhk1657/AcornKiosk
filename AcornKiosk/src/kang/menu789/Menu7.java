@@ -13,7 +13,7 @@ public class Menu7 extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		FXMLLoader loader = new FXMLLoader(
-				getClass().getResource("../page09.fxml"));
+				getClass().getResource("../page07.fxml"));
 		
 		Parent root = loader.load();
 //		Controller ctrl = loader.getController();

@@ -23,7 +23,7 @@ public class addOrderServiceImpl implements addOrderService{
 		// 기존 창을 새창으로 바꾸기
 		Stage payMethod = (Stage) orderRoot.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(
-				getClass().getResource("../payMethodUI.fxml"));
+				getClass().getResource("../payMethodUI_card.fxml"));
 		
 		/*기촌창 + 새창 
 		Stage payMethod = new Stage();

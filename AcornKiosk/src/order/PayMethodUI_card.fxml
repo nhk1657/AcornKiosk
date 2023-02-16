@@ -10,12 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="order.Controller">
    <children>
-      <Button onAction="#card" layoutX="77.0" layoutY="381.0" mnemonicParsing="false" prefHeight="124.0" prefWidth="150.0" style="-fx-background-color: #01AAFF;" text="카드 결제 " textFill="WHITE">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
-      <Button layoutX="268.0" layoutY="381.0" mnemonicParsing="false" prefHeight="124.0" prefWidth="150.0" style="-fx-background-color: #01AAFF;" text="쿠폰 결제 " textFill="WHITE">
+      <Button  onAction="#card2" layoutX="174.0" layoutY="381.0" mnemonicParsing="false" prefHeight="124.0" prefWidth="150.0" style="-fx-background-color: #01AAFF;" text="카드 결제 " textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -29,14 +24,10 @@
             </Label>
          </children>
       </HBox>
-      <ImageView fitHeight="97.0" fitWidth="125.0" layoutX="103.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="97.0" fitWidth="125.0" layoutX="199.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/card.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="97.0" fitWidth="125.0" layoutX="295.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/coupon.png" />
-         </image></ImageView>
    </children>
 </Pane>
