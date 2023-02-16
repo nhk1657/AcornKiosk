@@ -52,6 +52,7 @@ public class SelectPopImpl implements SelectPop{
 			odrm.setMenuprice(se.menu_price);
 			odrm.setMenusell(menu_sell);
 			mt.input(odrm);
+			menu_sell=0;
 			Parent choice =(Parent) event.getSource();
 			Stage ChoicePop = (Stage) choice.getScene().getWindow();
 			ChoicePop.close();
