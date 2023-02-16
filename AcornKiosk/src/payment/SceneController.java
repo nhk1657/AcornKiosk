@@ -29,7 +29,7 @@ public class SceneController {
 	private Pane ScenePane;
 
 	public void switchToScene0(ActionEvent event) throws IOException, InterruptedException {
-		Parent root = FXMLLoader.load(getClass().getResource("page00.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("../main/kioskMain.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -47,7 +47,7 @@ public class SceneController {
 	}
 	
 	public void switchToScene2(ActionEvent event) throws IOException, InterruptedException {
-		Parent root = FXMLLoader.load(getClass().getResource("PayMethodUI1.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("../order/PayMethodUI_card.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -128,7 +128,7 @@ public class SceneController {
 	}
 
 	public void print(ActionEvent event) throws IOException, InterruptedException {
-		Parent root = FXMLLoader.load(getClass().getResource("CardCashingUI.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("../main/kioskMain.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		System.out.println("출력되었습니다.");
 		scene = new Scene(root);
