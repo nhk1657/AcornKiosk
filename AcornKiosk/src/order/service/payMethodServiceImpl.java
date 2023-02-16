@@ -2,10 +2,10 @@ package order.service;
 
 import javafx.scene.Parent;
 import javafx.stage.Stage;
-import kang.menu789.Menu7;
 import order.db.orderMenu;
 import order.db.orderdata;
 import order.db.orderdataImpl;
+import payment.Main;
 
 public class payMethodServiceImpl implements payMethodService {
 	orderdata od;
@@ -17,11 +17,11 @@ public class payMethodServiceImpl implements payMethodService {
 		
 		od = new orderdataImpl();
 		Stage orderCard = (Stage)orderPay.getScene().getWindow();
-		Menu7 menu7 = new Menu7();
-		
+		//Menu7 menu7 = new Menu7();
+		Main paymain = new Main();
 		try {
-		    od.deleteOrder();
-			menu7.start(orderCard);
+		    
+			paymain.start(orderCard);
 			//od.selectMenu().clear();
 			
 		}catch(Exception e) {
