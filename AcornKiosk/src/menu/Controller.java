@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Slider;
+import menu.db.MenuData;
+import menu.db.MenuDataImpl;
 import menu.db.OrderMenu;
 
 
@@ -23,6 +25,7 @@ public class Controller{
 	Section se;
 	SelectSection ss;
 	SelectPop sp;
+	MenuData md;
 	Slider slider;
 	public void setmenu(Parent menuroot) {
 		// TODO Auto-generated method stub
@@ -34,6 +37,7 @@ public class Controller{
 		se=new SectionImpl();
 		sp=new SelectPopImpl();
 		op=new OutputsImpl();
+		md=new MenuDataImpl();
 	}
 	
 	
@@ -131,6 +135,7 @@ public class Controller{
 		ss.smobtn(menuroot);
 	}
 	public void cancelbtn() {
+		md.deleteMenu();
 		op.cancelbtn(menuroot);
 	}
 	public void cashbtn() {
