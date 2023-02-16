@@ -11,4 +11,5 @@ public interface MenuData {
 	public int menuPrice(int menuid);
 	public String orderName(int searchid);
 	public int orderPrice(int searchid);
+	public boolean deleteMenu();
 }

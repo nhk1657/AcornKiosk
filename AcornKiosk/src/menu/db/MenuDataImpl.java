@@ -202,4 +202,18 @@ public class MenuDataImpl implements MenuData{
 		return orders;
 	}
 	
+	@Override
+	public boolean deleteMenu() {
+		// TODO Auto-generated method stub
+		String sql="delete from  orderMenu";   
+		
+		try {
+			pstmt = con.prepareStatement(sql);   
+			int result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return true;
+	}
 }
