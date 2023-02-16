@@ -124,17 +124,14 @@ public class AdminServiceImpl implements AdminService{
 		TableColumn<Member, String> birth = new TableColumn<>("생년월일");
 		birth.setCellValueFactory(new PropertyValueFactory<>("birth"));
 		birth.setPrefWidth(150);
-		TableColumn<Member, String> stamps = new TableColumn<>("스탬프");
-		stamps.setCellValueFactory(new PropertyValueFactory<>("stamps"));
-		stamps.setPrefWidth(100);
 		
-		memberTable.getColumns().addAll(id,pw,name,email,birth,stamps);
+		memberTable.getColumns().addAll(id,pw,name,email,birth);
 		
 		List<Member> memberList = dt.selectMember(); 
 		
 		ObservableList<Member> data = FXCollections.observableArrayList(memberList);
 		memberTable.setItems(data);
-		memberTable.setPrefSize(750, 1000);
+		memberTable.setPrefSize(650, 1000);
 		
 		sp.setContent(memberTable);
 		//sp.getChildrenUnmodifiable().add(menuTable);
@@ -231,13 +228,13 @@ public class AdminServiceImpl implements AdminService{
 		
 		TableColumn<Menu, String> menuid = new TableColumn<>("NO.");
 		menuid.setCellValueFactory(new PropertyValueFactory<>("menuid"));
-		menuid.setPrefWidth(50);
+		menuid.setPrefWidth(100);
 		TableColumn<Menu, String> menuname = new TableColumn<>("메뉴");
 		menuname.setCellValueFactory(new PropertyValueFactory<>("menuname"));
 		menuname.setPrefWidth(150);
 		TableColumn<Menu, String> menuprice = new TableColumn<>("가격");
 		menuprice.setCellValueFactory(new PropertyValueFactory<>("menuprice"));
-		menuprice.setPrefWidth(100);
+		menuprice.setPrefWidth(150);
 		
 		menuTable.getColumns().addAll(menuid,menuname,menuprice);
 		
