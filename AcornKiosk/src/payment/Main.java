@@ -13,7 +13,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("CardCashingUI.fxml"));
-			Scene scene = new Scene(root,500,750);
+			Scene scene = new Scene(root,500,700);
 			
 			primaryStage.setScene(scene);
 			primaryStage.show();

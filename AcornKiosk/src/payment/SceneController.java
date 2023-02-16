@@ -34,7 +34,7 @@ public class SceneController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-		Thread.sleep(500);
+
 	}
 
 	public void switchToScene1(ActionEvent event) throws IOException, InterruptedException {
@@ -43,7 +43,7 @@ public class SceneController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-		Thread.sleep(500);
+
 	}
 	
 	public void switchToScene2(ActionEvent event) throws IOException, InterruptedException {
@@ -52,7 +52,7 @@ public class SceneController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-		Thread.sleep(500);
+
 	}
 
 	public void switchToScene3(ActionEvent event) throws IOException, InterruptedException {
@@ -86,7 +86,7 @@ public class SceneController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-		Thread.sleep(4000);
+
 	
 	}
 	public void switchToScene05(ActionEvent event) throws IOException, InterruptedException {
@@ -108,7 +108,7 @@ public class SceneController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-		Thread.sleep(500);
+
 
 	}
 	public void cancel(ActionEvent event)throws IOException, InterruptedException {
@@ -123,7 +123,7 @@ public class SceneController {
 			System.out.println("주문 취소되었습니다");
 			stage.close();
 		}
-		Thread.sleep(500);
+
 
 	}
 
@@ -134,7 +134,7 @@ public class SceneController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-		Thread.sleep(500);
+
 
 		
 	}
