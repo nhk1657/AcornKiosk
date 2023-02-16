@@ -102,7 +102,6 @@ public class dataTestImpl implements dataTest{
 				m.setName(rs.getString(3));
 				m.setEmail(rs.getString(4));
 				m.setBirth(rs.getDate(5));
-				m.setStamps(rs.getInt(6));
 				System.out.println(m.getId()+" "+m.getPw()+" "+m.getName()+" "+m.getEmail()+" "+m.getBirth()+" "+m.getStamps());
 				memberList.add(m);
 			}
