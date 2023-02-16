@@ -12,7 +12,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("InputCoupUI.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("CardCashingUI.fxml"));
 			Scene scene = new Scene(root,500,750);
 			
 			primaryStage.setScene(scene);

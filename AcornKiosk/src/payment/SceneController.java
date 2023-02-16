@@ -99,18 +99,18 @@ public class SceneController {
 		
 	
 	}
-//	public void switchToScene6(ActionEvent event) throws IOException, InterruptedException {
-//		Parent root = FXMLLoader.load(getClass().getResource("ShowReceiptUI.fxml"));
-//
-//
-//
-//		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//		scene = new Scene(root);
-//		stage.setScene(scene);
-//		stage.show();
-//		Thread.sleep(500);
-//
-//	}
+	public void switchToScene6(ActionEvent event) throws IOException, InterruptedException {
+		Parent root = FXMLLoader.load(getClass().getResource("ShowReceiptUI.fxml"));
+
+
+
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+		Thread.sleep(500);
+
+	}
 	public void cancel(ActionEvent event)throws IOException, InterruptedException {
 
 		Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -127,17 +127,17 @@ public class SceneController {
 
 	}
 
-//	public void print(ActionEvent event) throws IOException, InterruptedException {
-//		Parent root = FXMLLoader.load(getClass().getResource("CardCashingUI.fxml"));
-//		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//		System.out.println("출력되었습니다.");
-//		scene = new Scene(root);
-//		stage.setScene(scene);
-//		stage.show();
-//		Thread.sleep(500);
-//
-//		
-//	}
+	public void print(ActionEvent event) throws IOException, InterruptedException {
+		Parent root = FXMLLoader.load(getClass().getResource("CardCashingUI.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		System.out.println("출력되었습니다.");
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+		Thread.sleep(500);
+
+		
+	}
 
 }
 
