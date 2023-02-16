@@ -46,12 +46,12 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#hot" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="HOT" textFill="#01aaff">
+                  <Button mnemonicParsing="false" fx:id="hotbtn" onAction="#hot" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="HOT" textFill="#01aaff">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="41" mnemonicParsing="false" onAction="#cold" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="COLD" textFill="#01aaff">
+                  <Button  mnemonicParsing="false" fx:id="coldbtn" onAction="#cold" prefWidth="65.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #01AAFF;" text="COLD" textFill="#01aaff">
                      <font>
                         <Font size="15.0" />
                      </font>

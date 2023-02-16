@@ -3,8 +3,9 @@ package menu;
 import javafx.event.ActionEvent;
 
 import javafx.scene.Parent;
-
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import menu.db.MenuData;
 import menu.db.MenuDataImpl;
@@ -62,12 +63,24 @@ public class SelectPopImpl implements SelectPop{
 	@Override
 	public void hot(Parent pop) {
 		// TODO Auto-generated method stub
+		Button btn1 =(Button) pop.lookup("#hotbtn");
+		btn1.setStyle("-fx-background-color: #01AAFF");
+		btn1.setTextFill(Color.valueOf("#FFFFFF"));
+		Button btn2 =(Button) pop.lookup("#coldbtn");
+		btn2.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn2.setTextFill(Color.valueOf("#01AAFF"));
 		tempers=0;
 	}
 
 	@Override
 	public void cold(Parent pop) {
 		// TODO Auto-generated method stub
+		Button btn1 =(Button) pop.lookup("#hotbtn");
+		btn1.setStyle("-fx-background-color: #FFFFFF; -fx-border-color:#01AAFF");
+		btn1.setTextFill(Color.valueOf("#01AAFF"));
+		Button btn2 =(Button) pop.lookup("#coldbtn");
+		btn2.setStyle("-fx-background-color: #01AAFF");
+		btn2.setTextFill(Color.valueOf("#FFFFFF"));
 		tempers=300;
 	}
 
