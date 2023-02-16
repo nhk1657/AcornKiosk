@@ -82,14 +82,13 @@ public class DatabaseServiceImpl implements DatabaseService {
 	
 	// 회원 정보 등록
 	public boolean insert(Member m) throws Exception {
-		String sql = "INSERT INTO member VALUES(?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO member VALUES(?, ?, ?, ?, ?)";
 		pstmt = con.prepareStatement(sql);
 		pstmt.setString(1, m.getId());
 		pstmt.setString(2, m.getPw());
 		pstmt.setString(3, m.getName());
 		pstmt.setString(4, m.getEmail());
 		pstmt.setDate(5, (Date) m.getBirth());
-		pstmt.setInt(6, 0);
 		
 		int result = pstmt.executeUpdate();
 		
